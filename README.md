@@ -1,42 +1,83 @@
-<h1 align="center">Hey there, I'm <code>Omar Ibrahim Israfil</code> 👋</h1>
+
+<!-- Cyberpunk-Themed README by Omar Ibrahim Israfil -->
+<h1 align="center">⚡ Oᴍᴀʀ Iʙʀᴀʜɪᴍ Iꜱʀᴀꜰɪʟ ⚡</h1>
 
 <p align="center">
-  <img src="https://i.ibb.co/whF2f6Pk/793y-M4-XVrh-U.jpg" width="200" style="border-radius: 50%" alt="Omar Ibrahim Israfil"/>
+  <code>NLP Researcher</code> • <code>LLM Alchemist</code> • <code>17 y.o. AI Innovator</code><br>
+  <sub>🧠 Making machines understand the unheard languages</sub>
 </p>
+
+---
+
+## 🧬 About Me
+
+```python
+class Omar:
+    age = 17
+    city = "Baku"
+    mission = "AI for underrepresented languages"
+    stack = ["PyTorch", "Transformers", "HuggingFace", "Python"]
+    
+    def vision():
+        return "Make Azerbaijani the next AI-native language"
+```
+
+---
+
+## 🛰️ Projects
+
+| 🚀 Project | 🌐 Link | 🔧 Tech |
+|-----------|---------|--------|
+| AzeriLLM(unt-7b) | [HuggingFace](https://huggingface.co/omar07ibrahim) | PyTorch, LLaMA |
+| NutriScan (TeensInAI 🥈) | - | CV, Mobile, Flask |
+| Cross-Lingual Sentiment Engine | Private | Transformers, Zero-shot |
+| Translation Dataset (2.7M Pairs) | Soon™ | Custom MT, QA System |
+
+---
+
+## 🌐 Let's Connect
+
+[![Website](https://img.shields.io/badge/Website-omar07ibrahim.netlify.app-black?style=for-the-badge&logo=firefox)](https://omar07ibrahim.netlify.app)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-%F0%9F%A4%97-orange?style=for-the-badge)](https://huggingface.co/omar07ibrahim)
+[![Telegram](https://img.shields.io/badge/Telegram-%40omaribrahim-blue?style=for-the-badge&logo=telegram)](https://t.me/omaribrahim)
+[![Gmail](https://img.shields.io/badge/Email-omar@ibrahim.az-red?style=for-the-badge&logo=gmail)](mailto:omar@ibrahim.az)
+
+---
+
+## 📈 GitHub Stats
 
 <p align="center">
-  <b>🧠 AI Innovator · 🗣️ NLP Researcher · 🇦🇿 Azerbaijani Language Technologist</b><br>
-  <i>Crafting Language Models that Speak for the Unheard</i>
+  <img src="https://github-readme-stats.vercel.app/api?username=omar07ibrahim&show_icons=true&theme=tokyonight" width="49%">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=omar07ibrahim&theme=tokyonight" width="49%">
+  <br>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=omar07ibrahim&layout=compact&theme=tokyonight">
 </p>
 
 ---
 
-### 🚀 Mission
-> "I believe that AI should serve everyone, regardless of their language or background."
+## 🧠 Currently Working On
 
-I'm a 17 y.o. Machine Learning engineer and independent researcher from **Baku, Azerbaijan** working on cutting-edge **NLP for low-resource languages**, including **AzeriLLM(unt-7b)** – the *first native LLM for the Azerbaijani language*.
-
----
-
-### 🧪 Currently Working On:
-- 🔬 LLM fine-tuning & evaluation for **underrepresented languages**
-- 🌍 Scaling **English–Azerbaijani** translation datasets (2.7M+ chunks)
-- 🤖 Creating open-source tools for NLP researchers in **Turkic languages**
-- 📚 Preparing for **MBZUAI 2029**
+- 🏗️ Fine-tuning multilingual LLMs on custom datasets
+- 📚 Preparing for MBZUAI Class of 2029
+- 🤖 Building tools for low-resource NLP researchers
+- 🧵 Writing papers on transfer learning & tokenizer optimization
 
 ---
 
-### 📌 Featured Projects
-- **[AzeriLLM(unt-7b)]** – 7B LLaMA-based Azerbaijani LLM with 87% task accuracy  
-- **NutriScan** – AI-powered mobile app for calorie estimation 🥗 (TeensInAI 2nd 🥈)  
-- **QuickPay** – Mobile payment app (PashaHackathon 2nd 🥈)  
-- **SafeCheck** – AI-driven transaction monitor (PashaHackathon 3rd 🥉)
+## 💡 Philosophy
+
+> "AI shouldn’t be a privilege for high-resource languages —  
+> it should *amplify every voice*, no matter the language or region."  
+> — Omar Ibrahim Israfil
 
 ---
 
-### 🛠️ Tech Stack
-```txt
-Languages   : Python, JavaScript, SQL, HTML/CSS
-AI/ML       : PyTorch, TensorFlow, Hugging Face, scikit-learn
-NLP Skills  : Tokenization, LLMs, MT, Sentiment Analysis, NER
-Tools       : Docker, Git, Linux, Figma, Jupyter, Adobe Illustrator
+## 🔍 Fun Fact
+
+🧪 I’m 17 and already beating Google Translate on Azerbaijani.
+
+---
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&pause=1000&color=00F7FF&center=true&vCenter=true&width=435&lines=Always+Training...;Always+Translating...;Always+Transforming..." alt="Typing SVG" />
+</p>
