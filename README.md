@@ -30,8 +30,8 @@ class Omar:
 |-----------|---------|--------|
 | AzeriLLM(unt-7b) | [HuggingFace](https://huggingface.co/omar07ibrahim) | PyTorch, LLaMA |
 | NutriScan (TeensInAI 🥈) | - | CV, Mobile, Flask |
-| Cross-Lingual Sentiment Engine | Private | Transformers, Zero-shot |
-| Translation Dataset (2.7M Pairs) | Soon™ | Custom MT, QA System |
+| Cross-Lingual Sentiment Engine | temporarily private  | Transformers, Zero-shot |
+| Translation Dataset (2.7M Pairs) |[HuggingFace](https://huggingface.co/omar07ibrahim) | Custom MT, QA System |
 
 ---
 
