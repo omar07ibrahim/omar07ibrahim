@@ -44,17 +44,6 @@ class Omar:
 
 ---
 
-## 📈 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=omar07ibrahim&show_icons=true&theme=tokyonight" width="49%">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=omar07ibrahim&theme=tokyonight" width="49%">
-  <br>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=omar07ibrahim&layout=compact&theme=tokyonight">
-</p>
-
----
-
 ## 🧠 Currently Working On
 
 - 🏗️ Fine-tuning multilingual LLMs on custom datasets
