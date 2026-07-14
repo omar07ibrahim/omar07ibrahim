@@ -1,14 +1,31 @@
 # Omar Ibrahim
 
-I build reliable AI systems across inference infrastructure, model tooling, and
-evaluation. I am especially interested in failures at system boundaries:
-unreliable event streams, model-artifact mismatches, ambiguous evidence, and
-real inputs that clean benchmarks miss.
+I build reliable AI systems across compiler/runtime infrastructure, inference
+reliability, model tooling, and evaluation. I am especially interested in
+failures at system boundaries: unreliable event streams, model-artifact
+mismatches, unverified storage assumptions, ambiguous evidence, and real inputs
+that clean benchmarks miss.
 
 My projects turn those failures into bounded, reproducible experiments with
 explicit trust assumptions and machine-checkable results.
 
 ## Selected work
+
+### [TensorKiln](https://github.com/omar07ibrahim/tensorkiln) · C++20 · Tensor compiler/runtime
+
+TensorKiln is a dependency-free compiler for static `f32` tensor graphs. Its
+current vertical slice includes checked rank 0-4 types, transactional graph
+construction, batched `MatMul` and broadcasting, an independent reference
+interpreter, dead-code elimination, and exact structural canonicalization with
+composable provenance.
+
+The graph-to-arena boundary derives compute lifetimes, applies a deterministic
+64-byte interval planner, and returns a storage projection only after an
+independently coded reverse verifier reconstructs and agrees with every mapping,
+request, statistic, and allocation. Seeded brute-force oracles, exact resource
+boundaries, GCC/Clang builds, and sanitizers exercise these invariants. The
+current milestone deliberately stops before layout lowering, kernels, and
+optimized execution.
 
 ### [KVCrucible](https://github.com/omar07ibrahim/kvcrucible) · Rust · AI inference reliability
 
