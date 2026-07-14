@@ -11,6 +11,20 @@ explicit trust assumptions and machine-checkable results.
 
 ## Selected work
 
+### [SSemaphore](https://github.com/omar07ibrahim/ssemaphore) · Go · LLM serving infrastructure
+
+SSemaphore is a correctness-first local gateway for bounded, multi-tenant Chat
+Completions traffic. Its admission path combines estimated-service accounting
+with work-deficit round robin scheduling, explicit queue and body budgets,
+disconnect-aware cancellation, and a fixed upstream transport boundary.
+
+The runnable gateway accepts a strict versioned policy from a private Linux
+file, consumes bearer credentials through one-shot environment references, and
+binds only to an exact numeric loopback address. End-to-end wire tests cover
+admission, authenticated forwarding, signal-owned shutdown, and listener
+cleanup; the release gate also exercises the race detector and 32-bit checked
+arithmetic.
+
 ### [TensorKiln](https://github.com/omar07ibrahim/tensorkiln) · C++20 · Tensor compiler/runtime
 
 TensorKiln is a dependency-free compiler for static `f32` tensor graphs. Its
