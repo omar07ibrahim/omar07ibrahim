@@ -14,16 +14,19 @@ explicit trust assumptions and machine-checkable results.
 ### [ImpactDiff](https://github.com/omar07ibrahim/impactdiff) · TypeScript · Multimodal ML evaluation
 
 ImpactDiff is a research lab for task-aware visual regression: whether a UI
-change breaks a user task or damages accessibility, not merely whether pixels
-changed. Its current milestone implements closed screenshot, accessibility,
-layout, action-plan, and environment contracts; canonical PNG and JSON codecs;
-and leakage-aware visible/sealed evidence validation.
+change breaks a user task or damages accessibility, rather than merely changing
+pixels. It captures canonical screenshots, accessibility trees, and bounded
+layout graphs around a real coordinate-driven task, while storing model-visible
+evidence separately from intervention metadata, execution traces, and labels.
 
-A pinned Chromium fixture drives live source probes and reversible palette and
-pointer interventions inside an audited mutation session. Exact resource and
-action-plan bytes, CSP, virtual time, network activity, DOM/CSS integrity, and
-cleanup are tested across Node 22 and 24. Complete paired-capture publication,
-the benchmark dataset, and learned baselines remain explicit future work.
+The current milestone runs baseline and mutated candidates in distinct fresh
+BrowserContexts under one verified Chromium environment, compiles and rolls
+back typed palette and pointer interventions, derives and replays complete
+evidence records, and atomically publishes immutable visible/sealed release
+pairs. Node 22 and 24 CI exercises 233 tests across capture, provenance,
+recovery, and publication boundaries. A multi-application dataset, isolated
+feature runner, trained models, and benchmark result remain the next research
+milestone; the repository makes no accuracy claim today.
 
 ### [SSemaphore](https://github.com/omar07ibrahim/ssemaphore) · Go · LLM serving infrastructure
 
