@@ -1,15 +1,29 @@
 # Omar Ibrahim
 
-I build reliable AI systems across compiler/runtime infrastructure, inference
-reliability, model tooling, and evaluation. I am especially interested in
-failures at system boundaries: unreliable event streams, model-artifact
-mismatches, unverified storage assumptions, ambiguous evidence, and real inputs
-that clean benchmarks miss.
+I build reliable AI systems across multimodal evaluation, browser automation,
+compiler/runtime infrastructure, inference reliability, and model tooling. I am
+especially interested in failures at system boundaries: unreliable event
+streams, model-artifact mismatches, unverified storage assumptions, ambiguous
+evidence, and real inputs that clean benchmarks miss.
 
 My projects turn those failures into bounded, reproducible experiments with
 explicit trust assumptions and machine-checkable results.
 
 ## Selected work
+
+### [ImpactDiff](https://github.com/omar07ibrahim/impactdiff) · TypeScript · Multimodal ML evaluation
+
+ImpactDiff is a research lab for task-aware visual regression: whether a UI
+change breaks a user task or damages accessibility, not merely whether pixels
+changed. Its current milestone implements closed screenshot, accessibility,
+layout, action-plan, and environment contracts; canonical PNG and JSON codecs;
+and leakage-aware visible/sealed evidence validation.
+
+A pinned Chromium fixture drives live source probes and reversible palette and
+pointer interventions inside an audited mutation session. Exact resource and
+action-plan bytes, CSP, virtual time, network activity, DOM/CSS integrity, and
+cleanup are tested across Node 22 and 24. Complete paired-capture publication,
+the benchmark dataset, and learned baselines remain explicit future work.
 
 ### [SSemaphore](https://github.com/omar07ibrahim/ssemaphore) · Go · LLM serving infrastructure
 
