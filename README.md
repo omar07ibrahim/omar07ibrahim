@@ -42,6 +42,13 @@ admission, authenticated forwarding, signal-owned shutdown, and listener
 cleanup; the release gate also exercises the race detector and 32-bit checked
 arithmetic.
 
+Its bounded SSE relay validates one `data:` event at a time under total,
+per-event, count, idle-read, event, and total deadlines. It flushes validated
+chunks with bounded read-ahead, keeps the admission permit through a clean
+`[DONE]` and EOF, and separates pre-commit gateway errors from post-commit
+stream truncation. A real loopback test proves that the first chunk reaches the
+client before the upstream response completes.
+
 ### [TensorKiln](https://github.com/omar07ibrahim/tensorkiln) · C++20 · Tensor compiler/runtime
 
 TensorKiln is a dependency-free compiler for static `f32` tensor graphs. Its
