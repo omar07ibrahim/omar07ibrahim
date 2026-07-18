@@ -93,9 +93,17 @@ ships pure parsers for pinned PEFT adapter configurations and safetensors
 manifests, including duplicate-key rejection, explicit byte and JSON budgets,
 checked tensor-shape arithmetic, span validation, and payload-coverage proofs.
 
-Its versioned compatibility contract distinguishes evidence that can justify a
-static result from cases that must remain `Unknown` until runtime validation is
-available.
+An [inventory milestone under review](https://github.com/omar07ibrahim/peftlint/pull/4)
+turns those immutable manifests into exact, path-scoped evidence for saved LoRA
+pair closure, dimensions, and configured rank. It distinguishes modeled
+two-dimensional weight pairs from higher-rank convolution candidates, which
+remain `Unknown` instead of being mislabeled as incompatible. The evaluator
+imports neither PEFT nor Torch, reads no tensor payload, and never executes a
+retained rank-pattern regex.
+
+The versioned compatibility contract keeps these findings separate from a full
+load verdict: base topology, selection, dtype, saved-module, and vocabulary
+evidence remain explicit future dependencies.
 
 ### [OrthoDrift](https://github.com/omar07ibrahim/orthodrift) · Python · Retrieval evaluation
 
