@@ -23,8 +23,8 @@ The current milestone runs baseline and mutated candidates in distinct fresh
 BrowserContexts under one verified Chromium environment, compiles and rolls
 back typed palette and pointer interventions, derives and replays complete
 evidence records, and atomically publishes immutable visible/sealed release
-pairs. Node 22 and 24 CI exercises 233 tests across capture, provenance,
-recovery, and publication boundaries. A multi-application dataset, isolated
+pairs. The Node 22 and 24 CI lanes exercise capture, provenance, recovery, and
+publication boundaries. A multi-application dataset, isolated
 feature runner, trained models, and benchmark result remain the next research
 milestone; the repository makes no accuracy claim today.
 
