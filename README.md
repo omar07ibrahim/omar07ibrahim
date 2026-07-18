@@ -49,6 +49,22 @@ chunks with bounded read-ahead, keeps the admission permit through a clean
 stream truncation. A real loopback test proves that the first chunk reaches the
 client before the upstream response completes.
 
+### [ShardLift](https://github.com/omar07ibrahim/shardlift) · Python/PyTorch · Distributed training reliability
+
+ShardLift is a Linux crash-consistency lab for sharded training state. Its
+`killer-demo` kills an isolated checkpoint publisher with a real `SIGKILL`,
+recovers from verified immutable commit records, continues the recovered
+four-worker state, reshards it offline from four workers to three, and compares
+the result with an uninterrupted trajectory using logical-state roots and exact
+fixed-probe logits.
+
+The canonical CPython 3.14 evidence lane runs both public crash barriers from a
+hash-locked wheel and PyTorch CPU runtime, re-verifies the retained bundles, and
+publishes the evidence and runtime provenance. Separate Python 3.11–3.14 lanes
+exercise the core package, typing, coverage, and clean wheel install. The claim
+is deliberately limited to process crashes on the recorded environment; it is
+not a power-loss durability or production-training claim.
+
 ### [TensorKiln](https://github.com/omar07ibrahim/tensorkiln) · C++20 · Tensor compiler/runtime
 
 TensorKiln is a dependency-free compiler for static `f32` tensor graphs. Its
