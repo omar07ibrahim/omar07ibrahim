@@ -57,13 +57,20 @@ construction, batched `MatMul` and broadcasting, an independent reference
 interpreter, dead-code elimination, and exact structural canonicalization with
 composable provenance.
 
-The graph-to-arena boundary derives compute lifetimes, applies a deterministic
-64-byte interval planner, and returns a storage projection only after an
-independently coded reverse verifier reconstructs and agrees with every mapping,
-request, statistic, and allocation. Seeded brute-force oracles, exact resource
-boundaries, GCC/Clang builds, and sanitizers exercise these invariants. The
-current milestone deliberately stops before layout lowering, kernels, and
-optimized execution.
+The released alpha's graph-to-arena boundary derives compute lifetimes, applies
+a deterministic 64-byte interval planner, and returns a storage projection only
+after an independently coded reverse verifier reconstructs and agrees with
+every mapping, request, statistic, and allocation.
+
+An [execution milestone under review](https://github.com/omar07ibrahim/tensorkiln/pull/9)
+builds a minimal kernel/placement candidate and independently reconstructs its
+operands, dense layouts, storage, lifetimes, limits, and work before execution.
+Its arena session runs five explicit kernels, rejects invalid floating-point
+environments, guards each non-empty workspace, and can audit each kernel's
+exact write set. The first and repeated run remain allocation-free under
+wrapped C/C++ allocators. A replayable 128-DAG differential corpus, sanitizers,
+and a real ELF32/i386 x87 gate exercise the boundary; the milestone makes no
+benchmark claim.
 
 ### [KVCrucible](https://github.com/omar07ibrahim/kvcrucible) · Rust · AI inference reliability
 
