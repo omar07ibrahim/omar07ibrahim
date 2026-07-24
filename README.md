@@ -23,8 +23,8 @@ The current milestone runs baseline and mutated candidates in distinct fresh
 BrowserContexts under one verified Chromium environment, compiles and rolls
 back typed palette and pointer interventions, derives and replays complete
 evidence records, and atomically publishes immutable visible/sealed release
-pairs. Node 22 and 24 CI exercises 233 tests across capture, provenance,
-recovery, and publication boundaries. A multi-application dataset, isolated
+pairs. The Node 22 and 24 CI lanes exercise capture, provenance, recovery, and
+publication boundaries. A multi-application dataset, isolated
 feature runner, trained models, and benchmark result remain the next research
 milestone; the repository makes no accuracy claim today.
 
@@ -42,6 +42,29 @@ admission, authenticated forwarding, signal-owned shutdown, and listener
 cleanup; the release gate also exercises the race detector and 32-bit checked
 arithmetic.
 
+Its bounded SSE relay validates one `data:` event at a time under total,
+per-event, count, idle-read, event, and total deadlines. It flushes validated
+chunks with bounded read-ahead, keeps the admission permit through a clean
+`[DONE]` and EOF, and separates pre-commit gateway errors from post-commit
+stream truncation. A real loopback test proves that the first chunk reaches the
+client before the upstream response completes.
+
+### [ShardLift](https://github.com/omar07ibrahim/shardlift) · Python/PyTorch · Distributed training reliability
+
+ShardLift is a Linux crash-consistency lab for sharded training state. Its
+`killer-demo` kills an isolated checkpoint publisher with a real `SIGKILL`,
+recovers from verified immutable commit records, continues the recovered
+four-worker state, reshards it offline from four workers to three, and compares
+the result with an uninterrupted trajectory using logical-state roots and exact
+fixed-probe logits.
+
+The canonical CPython 3.14 evidence lane runs both public crash barriers from a
+hash-locked wheel and PyTorch CPU runtime, re-verifies the retained bundles, and
+publishes the evidence and runtime provenance. Separate Python 3.11–3.14 lanes
+exercise the core package, typing, coverage, and clean wheel install. The claim
+is deliberately limited to process crashes on the recorded environment; it is
+not a power-loss durability or production-training claim.
+
 ### [TensorKiln](https://github.com/omar07ibrahim/tensorkiln) · C++20 · Tensor compiler/runtime
 
 TensorKiln is a dependency-free compiler for static `f32` tensor graphs. Its
@@ -50,13 +73,20 @@ construction, batched `MatMul` and broadcasting, an independent reference
 interpreter, dead-code elimination, and exact structural canonicalization with
 composable provenance.
 
-The graph-to-arena boundary derives compute lifetimes, applies a deterministic
-64-byte interval planner, and returns a storage projection only after an
-independently coded reverse verifier reconstructs and agrees with every mapping,
-request, statistic, and allocation. Seeded brute-force oracles, exact resource
-boundaries, GCC/Clang builds, and sanitizers exercise these invariants. The
-current milestone deliberately stops before layout lowering, kernels, and
-optimized execution.
+The released alpha's graph-to-arena boundary derives compute lifetimes, applies
+a deterministic 64-byte interval planner, and returns a storage projection only
+after an independently coded reverse verifier reconstructs and agrees with
+every mapping, request, statistic, and allocation.
+
+The merged [execution milestone](https://github.com/omar07ibrahim/tensorkiln/pull/9)
+builds a minimal kernel/placement candidate and independently reconstructs its
+operands, dense layouts, storage, lifetimes, limits, and work before execution.
+Its arena session runs five explicit kernels, rejects invalid floating-point
+environments, guards each non-empty workspace, and can audit each kernel's
+exact write set. The first and repeated run remain allocation-free under
+wrapped C/C++ allocators. A replayable 128-DAG differential corpus, sanitizers,
+and a real ELF32/i386 x87 gate exercise the boundary; the milestone makes no
+benchmark claim.
 
 ### [KVCrucible](https://github.com/omar07ibrahim/kvcrucible) · Rust · AI inference reliability
 
@@ -79,9 +109,17 @@ ships pure parsers for pinned PEFT adapter configurations and safetensors
 manifests, including duplicate-key rejection, explicit byte and JSON budgets,
 checked tensor-shape arithmetic, span validation, and payload-coverage proofs.
 
-Its versioned compatibility contract distinguishes evidence that can justify a
-static result from cases that must remain `Unknown` until runtime validation is
-available.
+The merged [inventory milestone](https://github.com/omar07ibrahim/peftlint/pull/4)
+turns those immutable manifests into exact, path-scoped evidence for saved LoRA
+pair closure, dimensions, and configured rank. It distinguishes modeled
+two-dimensional weight pairs from higher-rank convolution candidates, which
+remain `Unknown` instead of being mislabeled as incompatible. The evaluator
+imports neither PEFT nor Torch, reads no tensor payload, and never executes a
+retained rank-pattern regex.
+
+The versioned compatibility contract keeps these findings separate from a full
+load verdict: base topology, selection, dtype, saved-module, and vocabulary
+evidence remain explicit future dependencies.
 
 ### [OrthoDrift](https://github.com/omar07ibrahim/orthodrift) · Python · Retrieval evaluation
 
