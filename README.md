@@ -78,7 +78,7 @@ a deterministic 64-byte interval planner, and returns a storage projection only
 after an independently coded reverse verifier reconstructs and agrees with
 every mapping, request, statistic, and allocation.
 
-An [execution milestone under review](https://github.com/omar07ibrahim/tensorkiln/pull/9)
+The merged [execution milestone](https://github.com/omar07ibrahim/tensorkiln/pull/9)
 builds a minimal kernel/placement candidate and independently reconstructs its
 operands, dense layouts, storage, lifetimes, limits, and work before execution.
 Its arena session runs five explicit kernels, rejects invalid floating-point
@@ -109,7 +109,7 @@ ships pure parsers for pinned PEFT adapter configurations and safetensors
 manifests, including duplicate-key rejection, explicit byte and JSON budgets,
 checked tensor-shape arithmetic, span validation, and payload-coverage proofs.
 
-An [inventory milestone under review](https://github.com/omar07ibrahim/peftlint/pull/4)
+The merged [inventory milestone](https://github.com/omar07ibrahim/peftlint/pull/4)
 turns those immutable manifests into exact, path-scoped evidence for saved LoRA
 pair closure, dimensions, and configured rank. It distinguishes modeled
 two-dimensional weight pairs from higher-rank convolution candidates, which
