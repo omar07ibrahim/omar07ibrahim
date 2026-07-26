@@ -1,0 +1,157 @@
+{
+  "format": "omar.portfolio_map.v1",
+  "projects": [
+    {
+      "claim_boundary": "No benchmark or model-accuracy claim",
+      "commit_oid": "66c1ed8e0134707903f70eb9727e674cd72d3dbd",
+      "default_branch": "main",
+      "domain": "Multimodal evaluation",
+      "evidence_surface": "Canonical capture and intervention records",
+      "focus": "Task-aware visual change evidence",
+      "id": "impactdiff",
+      "language": "TypeScript",
+      "name": "ImpactDiff",
+      "repository": "omar07ibrahim/impactdiff",
+      "themes": [
+        "bounded-inputs",
+        "deterministic-replay",
+        "claim-boundaries"
+      ],
+      "url": "https://github.com/omar07ibrahim/impactdiff"
+    },
+    {
+      "claim_boundary": "No published throughput or RSS benchmark",
+      "commit_oid": "9989ae0f081012496cecd7b9641a1f17acced0bd",
+      "default_branch": "main",
+      "domain": "LLM serving infrastructure",
+      "evidence_surface": "End-to-end wire and relay tests",
+      "focus": "Bounded multi-tenant SSE admission",
+      "id": "ssemaphore",
+      "language": "Go",
+      "name": "SSemaphore",
+      "repository": "omar07ibrahim/ssemaphore",
+      "themes": [
+        "bounded-inputs",
+        "independent-verification",
+        "claim-boundaries"
+      ],
+      "url": "https://github.com/omar07ibrahim/ssemaphore"
+    },
+    {
+      "claim_boundary": "Process crashes, not power-loss durability",
+      "commit_oid": "b6491708082cb85772d79d1994c2f65a25f0992b",
+      "default_branch": "main",
+      "domain": "Distributed training reliability",
+      "evidence_surface": "Crash and recovery JSON evidence",
+      "focus": "Sharded checkpoint crash consistency",
+      "id": "shardlift",
+      "language": "Python / PyTorch",
+      "name": "ShardLift",
+      "repository": "omar07ibrahim/shardlift",
+      "themes": [
+        "deterministic-replay",
+        "independent-verification",
+        "claim-boundaries"
+      ],
+      "url": "https://github.com/omar07ibrahim/shardlift"
+    },
+    {
+      "claim_boundary": "Static f32 graph slice; no performance claim",
+      "commit_oid": "2549fb8e170c293bee7d34601ead863724bec20f",
+      "default_branch": "main",
+      "domain": "Tensor compiler and runtime",
+      "evidence_surface": "Executable transcripts and five SVGs",
+      "focus": "Verified graph lowering and execution",
+      "id": "tensorkiln",
+      "language": "C++20",
+      "name": "TensorKiln",
+      "repository": "omar07ibrahim/tensorkiln",
+      "themes": [
+        "bounded-inputs",
+        "deterministic-replay",
+        "independent-verification",
+        "claim-boundaries"
+      ],
+      "url": "https://github.com/omar07ibrahim/tensorkiln"
+    },
+    {
+      "claim_boundary": "Incomplete streams remain ineligible or unknown",
+      "commit_oid": "a5d710259b05eaceafaeceabf3ad7dee145cb608",
+      "default_branch": "main",
+      "domain": "AI inference reliability",
+      "evidence_surface": "Canonical fault-fold evidence",
+      "focus": "KV-cache metadata reconstruction",
+      "id": "kvcrucible",
+      "language": "Rust",
+      "name": "KVCrucible",
+      "repository": "omar07ibrahim/kvcrucible",
+      "themes": [
+        "bounded-inputs",
+        "deterministic-replay",
+        "claim-boundaries"
+      ],
+      "url": "https://github.com/omar07ibrahim/kvcrucible"
+    },
+    {
+      "claim_boundary": "No full model-load compatibility verdict",
+      "commit_oid": "348b0ab9ef0fa5f1609e65ed7cdff51309345d94",
+      "default_branch": "main",
+      "domain": "Model artifact tooling",
+      "evidence_surface": "Static LoRA inventory findings",
+      "focus": "Bounded adapter compatibility preflight",
+      "id": "peftlint",
+      "language": "Python",
+      "name": "peftlint",
+      "repository": "omar07ibrahim/peftlint",
+      "themes": [
+        "bounded-inputs",
+        "independent-verification",
+        "claim-boundaries"
+      ],
+      "url": "https://github.com/omar07ibrahim/peftlint"
+    },
+    {
+      "claim_boundary": "Azerbaijani first lane; no semantic guarantee",
+      "commit_oid": "5e49fa7a7459c41d04dbb5a196551e59c156aba7",
+      "default_branch": "main",
+      "domain": "Retrieval evaluation",
+      "evidence_surface": "Replayable retrieval JSONL evidence",
+      "focus": "Minimal grapheme-level rank failures",
+      "id": "orthodrift",
+      "language": "Python",
+      "name": "OrthoDrift",
+      "repository": "omar07ibrahim/orthodrift",
+      "themes": [
+        "deterministic-replay",
+        "independent-verification",
+        "claim-boundaries"
+      ],
+      "url": "https://github.com/omar07ibrahim/orthodrift"
+    }
+  ],
+  "scope": "Curated navigation snapshot of public default-branch work; not a benchmark or remote-state attestation.",
+  "subtitle": "Seven systems, four recurring engineering constraints",
+  "themes": [
+    {
+      "description": "Cap bytes, shapes, work, queues, and retained state before execution.",
+      "id": "bounded-inputs",
+      "label": "Bounded inputs"
+    },
+    {
+      "description": "Make failures replayable from canonical, content-bound records.",
+      "id": "deterministic-replay",
+      "label": "Deterministic replay"
+    },
+    {
+      "description": "Reconstruct or check claims through a separate verification path.",
+      "id": "independent-verification",
+      "label": "Independent verification"
+    },
+    {
+      "description": "Publish explicit non-goals wherever evidence stops.",
+      "id": "claim-boundaries",
+      "label": "Claim boundaries"
+    }
+  ],
+  "title": "Omar Ibrahim — AI systems portfolio map"
+}
