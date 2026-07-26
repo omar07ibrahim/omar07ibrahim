@@ -15,8 +15,13 @@ from typing import Final, NoReturn, cast
 
 FORMAT: Final = "omar.portfolio_map.v1"
 MAX_INPUT_BYTES: Final = 64 * 1024
-MAX_PROJECTS: Final = 12
-MAX_THEMES: Final = 8
+PROJECT_COUNT: Final = 7
+THEME_IDS: Final = (
+    "bounded-inputs",
+    "deterministic-replay",
+    "independent-verification",
+    "claim-boundaries",
+)
 MAX_TEXT_LENGTH: Final = 120
 
 _ROOT_FIELDS: Final = frozenset(
@@ -40,8 +45,9 @@ _PROJECT_FIELDS: Final = frozenset(
 )
 _THEME_FIELDS: Final = frozenset({"description", "id", "label"})
 _IDENTIFIER = re.compile(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*\Z")
-_REPOSITORY = re.compile(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\Z")
-_BRANCH = re.compile(r"[A-Za-z0-9][A-Za-z0-9._/-]{0,99}\Z")
+_REPOSITORY = re.compile(
+    r"omar07ibrahim/[A-Za-z0-9](?:[A-Za-z0-9_.-]{0,98}[A-Za-z0-9_])?\Z"
+)
 _COMMIT_OID = re.compile(r"[0-9a-f]{40}\Z")
 
 
@@ -258,8 +264,8 @@ def decode_portfolio_map(payload: bytes | str) -> PortfolioMap:
     theme_ids: set[str] = set()
     for raw_theme in _list(
         document["themes"],
-        minimum=1,
-        maximum=MAX_THEMES,
+        minimum=len(THEME_IDS),
+        maximum=len(THEME_IDS),
     ):
         item = _object(raw_theme, _THEME_FIELDS)
         identifier = _identifier(item["id"])
@@ -273,6 +279,8 @@ def decode_portfolio_map(payload: bytes | str) -> PortfolioMap:
                 description=_text(item["description"], maximum=120),
             )
         )
+    if tuple(theme.identifier for theme in themes) != THEME_IDS:
+        _fail(MapErrorCode.INVALID_VALUE)
 
     projects: list[Project] = []
     project_ids: set[str] = set()
@@ -280,8 +288,8 @@ def decode_portfolio_map(payload: bytes | str) -> PortfolioMap:
     repositories: set[str] = set()
     for raw_project in _list(
         document["projects"],
-        minimum=1,
-        maximum=MAX_PROJECTS,
+        minimum=PROJECT_COUNT,
+        maximum=PROJECT_COUNT,
     ):
         item = _object(raw_project, _PROJECT_FIELDS)
         identifier = _identifier(item["id"])
@@ -304,16 +312,16 @@ def decode_portfolio_map(payload: bytes | str) -> PortfolioMap:
             _fail(MapErrorCode.INVALID_VALUE)
         branch = _text(item["default_branch"], maximum=100)
         commit_oid = _text(item["commit_oid"], maximum=40)
-        if (
-            _BRANCH.fullmatch(branch) is None
-            or ".." in branch
-            or _COMMIT_OID.fullmatch(commit_oid) is None
-        ):
+        if branch != "main" or _COMMIT_OID.fullmatch(commit_oid) is None:
             _fail(MapErrorCode.INVALID_VALUE)
 
         project_themes = tuple(
             _identifier(value)
-            for value in _list(item["themes"], minimum=1, maximum=MAX_THEMES)
+            for value in _list(
+                item["themes"],
+                minimum=1,
+                maximum=len(THEME_IDS),
+            )
         )
         if (
             len(set(project_themes)) != len(project_themes)

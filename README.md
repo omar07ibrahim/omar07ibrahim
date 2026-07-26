@@ -9,6 +9,27 @@ evidence, and real inputs that clean benchmarks miss.
 My projects turn those failures into bounded, reproducible experiments with
 explicit trust assumptions and machine-checkable results.
 
+## Systems map
+
+![Source-derived map of seven selected public AI systems projects, their evidence surfaces, and claim boundaries](assets/portfolio-systems-map.svg)
+
+*Curated portfolio navigation.* Every project card comes from the strict
+[`portfolio/projects.v1.json`](portfolio/projects.v1.json) contract and shows
+one public evidence surface, one explicit non-goal, and the reviewed
+default-branch commit snapshot. This is not a benchmark scorecard or a live
+remote-state attestation.
+
+Reproduce the SVG and verify its exact source/output manifest:
+
+```bash
+python3 tools/render_portfolio_map.py --check
+```
+
+The adjacent
+[`portfolio-systems-map.manifest.json`](assets/portfolio-systems-map.manifest.json)
+binds the contract, renderer, canonical semantic digest, all seven refs, and
+the SVG bytes.
+
 ## Selected work
 
 ### [ImpactDiff](https://github.com/omar07ibrahim/impactdiff) · TypeScript · Multimodal ML evaluation

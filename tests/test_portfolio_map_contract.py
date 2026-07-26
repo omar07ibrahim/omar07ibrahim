@@ -138,10 +138,51 @@ class PortfolioMapContractTests(unittest.TestCase):
         traversal_branch["projects"][0]["default_branch"] = "../main"
         mutations.append(traversal_branch)
 
+        invalid_repository = document()
+        invalid_repository["projects"][0]["repository"] = "./repo"
+        invalid_repository["projects"][0]["url"] = "https://github.com/./repo"
+        mutations.append(invalid_repository)
+
+        fifth_theme = document()
+        fifth_theme["themes"].append({
+            "description": "A syntactically complete but undeclared theme.",
+            "id": "extra-theme",
+            "label": "Extra theme",
+        })
+        mutations.append(fifth_theme)
+
+        eighth_project = document()
+        additional = dict(eighth_project["projects"][0])
+        additional.update({
+            "commit_oid": "1" * 40,
+            "id": "eighth-project",
+            "name": "Eighth project",
+            "repository": "omar07ibrahim/eighth-project",
+            "url": "https://github.com/omar07ibrahim/eighth-project",
+        })
+        eighth_project["projects"].append(additional)
+        mutations.append(eighth_project)
+
         for mutation in mutations:
             with self.subTest(mutation=mutation):
                 self.assert_error(
                     encoded(mutation),
+                    MapErrorCode.INVALID_VALUE,
+                )
+
+    def test_v1_default_branch_is_the_exact_rendered_main_snapshot(self) -> None:
+        for invalid in (
+            "main/",
+            "main//x",
+            "main/.hidden",
+            "main/x.lock",
+            "develop",
+        ):
+            value = document()
+            value["projects"][0]["default_branch"] = invalid
+            with self.subTest(branch=invalid):
+                self.assert_error(
+                    encoded(value),
                     MapErrorCode.INVALID_VALUE,
                 )
 

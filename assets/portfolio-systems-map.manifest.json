@@ -1,0 +1,140 @@
+{
+  "check_command": "python3 tools/render_portfolio_map.py --check",
+  "claim_boundary": {
+    "contains_benchmark_results": false,
+    "description": "Curated navigation snapshot of public default-branch work; not a benchmark or remote-state attestation.",
+    "remote_state_is_live": false
+  },
+  "format": "omar.portfolio_map_manifest.v1",
+  "map": {
+    "project_count": 7,
+    "projects": [
+      {
+        "claim_boundary": "No benchmark or model-accuracy claim",
+        "commit_oid": "66c1ed8e0134707903f70eb9727e674cd72d3dbd",
+        "default_branch": "main",
+        "evidence_surface": "Canonical capture and intervention records",
+        "id": "impactdiff",
+        "repository": "omar07ibrahim/impactdiff",
+        "theme_ids": [
+          "bounded-inputs",
+          "deterministic-replay",
+          "claim-boundaries"
+        ]
+      },
+      {
+        "claim_boundary": "No published throughput or RSS benchmark",
+        "commit_oid": "9989ae0f081012496cecd7b9641a1f17acced0bd",
+        "default_branch": "main",
+        "evidence_surface": "End-to-end wire and relay tests",
+        "id": "ssemaphore",
+        "repository": "omar07ibrahim/ssemaphore",
+        "theme_ids": [
+          "bounded-inputs",
+          "independent-verification",
+          "claim-boundaries"
+        ]
+      },
+      {
+        "claim_boundary": "Process crashes, not power-loss durability",
+        "commit_oid": "b6491708082cb85772d79d1994c2f65a25f0992b",
+        "default_branch": "main",
+        "evidence_surface": "Crash and recovery JSON evidence",
+        "id": "shardlift",
+        "repository": "omar07ibrahim/shardlift",
+        "theme_ids": [
+          "deterministic-replay",
+          "independent-verification",
+          "claim-boundaries"
+        ]
+      },
+      {
+        "claim_boundary": "Static f32 graph slice; no performance claim",
+        "commit_oid": "2549fb8e170c293bee7d34601ead863724bec20f",
+        "default_branch": "main",
+        "evidence_surface": "Executable transcripts and five SVGs",
+        "id": "tensorkiln",
+        "repository": "omar07ibrahim/tensorkiln",
+        "theme_ids": [
+          "bounded-inputs",
+          "deterministic-replay",
+          "independent-verification",
+          "claim-boundaries"
+        ]
+      },
+      {
+        "claim_boundary": "Incomplete streams remain ineligible or unknown",
+        "commit_oid": "a5d710259b05eaceafaeceabf3ad7dee145cb608",
+        "default_branch": "main",
+        "evidence_surface": "Canonical fault-fold evidence",
+        "id": "kvcrucible",
+        "repository": "omar07ibrahim/kvcrucible",
+        "theme_ids": [
+          "bounded-inputs",
+          "deterministic-replay",
+          "claim-boundaries"
+        ]
+      },
+      {
+        "claim_boundary": "No full model-load compatibility verdict",
+        "commit_oid": "348b0ab9ef0fa5f1609e65ed7cdff51309345d94",
+        "default_branch": "main",
+        "evidence_surface": "Static LoRA inventory findings",
+        "id": "peftlint",
+        "repository": "omar07ibrahim/peftlint",
+        "theme_ids": [
+          "bounded-inputs",
+          "independent-verification",
+          "claim-boundaries"
+        ]
+      },
+      {
+        "claim_boundary": "Azerbaijani first lane; no semantic guarantee",
+        "commit_oid": "5e49fa7a7459c41d04dbb5a196551e59c156aba7",
+        "default_branch": "main",
+        "evidence_surface": "Replayable retrieval JSONL evidence",
+        "id": "orthodrift",
+        "repository": "omar07ibrahim/orthodrift",
+        "theme_ids": [
+          "deterministic-replay",
+          "independent-verification",
+          "claim-boundaries"
+        ]
+      }
+    ],
+    "semantic_sha256": "e7c9ae9b5e0344bed4ad72c40a8524ab46df7afa7896c8a7240b582e35ef61be",
+    "theme_count": 4,
+    "theme_ids": [
+      "bounded-inputs",
+      "deterministic-replay",
+      "independent-verification",
+      "claim-boundaries"
+    ]
+  },
+  "outputs": [
+    {
+      "bytes": 20728,
+      "media_type": "image/svg+xml",
+      "path": "assets/portfolio-systems-map.svg",
+      "sha256": "0b48547fb9142f04e014493a1fc87787b98fc9dc2d4221d59e07add5aa4b1e0a"
+    }
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "bytes": 5563,
+      "path": "portfolio/projects.v1.json",
+      "sha256": "636fba650879f214512007a707779613697be7a7d6f5602a7766d3e606c84717"
+    },
+    {
+      "bytes": 12052,
+      "path": "tools/portfolio_map_contract.py",
+      "sha256": "3e4a77531442b29a9f3de044725a834771826d43600483e3afaa5eea85d0a7f5"
+    },
+    {
+      "bytes": 29075,
+      "path": "tools/render_portfolio_map.py",
+      "sha256": "faac514e05938a8583d2173ad6fe7ab837df3912524c779d5e15ffc6c9bfe463"
+    }
+  ]
+}

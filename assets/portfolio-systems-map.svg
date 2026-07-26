@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1430" viewBox="0 0 1800 1430" role="img" aria-labelledby="map-title map-desc" data-format="omar.portfolio_map_manifest.v1" data-semantic-sha256="e7c9ae9b5e0344bed4ad72c40a8524ab46df7afa7896c8a7240b582e35ef61be">
+  <title id="map-title">Omar Ibrahim — AI systems portfolio map</title>
+  <desc id="map-desc">A source-derived navigation map of seven public AI systems projects, their evidence surfaces, recurring engineering themes, pinned default-branch refs, and explicit claim boundaries.</desc>
+  <style>
+    .background { fill: #f8fafc; }
+    .header { fill: #0f172a; }
+    .title { fill: #f8fafc; font: 700 38px Inter, "Segoe UI", Arial, sans-serif; }
+    .subtitle { fill: #cbd5e1; font: 400 20px Inter, "Segoe UI", Arial, sans-serif; }
+    .digest-label { fill: #94a3b8; font: 600 12px "SFMono-Regular", Consolas, monospace; letter-spacing: 0.8px; }
+    .digest { fill: #e2e8f0; font: 400 14px "SFMono-Regular", Consolas, monospace; }
+    .metric-label { fill: #cbd5e1; font: 700 11px Inter, "Segoe UI", Arial, sans-serif; letter-spacing: 1px; text-anchor: middle; }
+    .metric-value { fill: #ffffff; font: 700 30px Inter, "Segoe UI", Arial, sans-serif; text-anchor: middle; }
+    .section { fill: #0f172a; font: 700 22px Inter, "Segoe UI", Arial, sans-serif; }
+    .section-note { fill: #64748b; font: 400 15px Inter, "Segoe UI", Arial, sans-serif; }
+    .theme-title { fill: #0f172a; font: 700 20px Inter, "Segoe UI", Arial, sans-serif; }
+    .theme-copy { fill: #334155; font: 400 15px Inter, "Segoe UI", Arial, sans-serif; }
+    .project-card { fill: #ffffff; stroke: #d7e0ec; stroke-width: 2; }
+    .project-name { fill: #0f172a; font: 700 25px Inter, "Segoe UI", Arial, sans-serif; }
+    .project-meta { fill: #475569; font: 500 15px Inter, "Segoe UI", Arial, sans-serif; }
+    .row-label { fill: #64748b; font: 700 11px Inter, "Segoe UI", Arial, sans-serif; letter-spacing: 0.8px; }
+    .row-value { fill: #1e293b; font: 500 15px Inter, "Segoe UI", Arial, sans-serif; }
+    .boundary { fill: #9a3412; font: 600 15px Inter, "Segoe UI", Arial, sans-serif; }
+    .ref { fill: #64748b; font: 400 12px "SFMono-Regular", Consolas, monospace; }
+    .chip { fill: #334155; font: 600 11px Inter, "Segoe UI", Arial, sans-serif; }
+    .scope-title { fill: #ffffff; font: 700 20px Inter, "Segoe UI", Arial, sans-serif; }
+    .scope-copy { fill: #e2e8f0; font: 500 16px Inter, "Segoe UI", Arial, sans-serif; }
+    .scope-note { fill: #94a3b8; font: 400 14px Inter, "Segoe UI", Arial, sans-serif; }
+    .footer { fill: #dbeafe; stroke: #60a5fa; stroke-width: 2; }
+    .footer-title { fill: #075985; font: 700 16px Inter, "Segoe UI", Arial, sans-serif; }
+    .footer-copy { fill: #334155; font: 400 14px Inter, "Segoe UI", Arial, sans-serif; }
+  </style>
+  <rect class="background" width="1800" height="1430"/>
+  <rect class="header" x="32" y="28" width="1736" height="158" rx="24"/>
+  <text class="title" x="76" y="84" textLength="792" lengthAdjust="spacingAndGlyphs">Omar Ibrahim — AI systems portfolio map</text>
+  <text class="subtitle" x="76" y="122" textLength="514" lengthAdjust="spacingAndGlyphs">Seven systems, four recurring engineering constraints</text>
+  <text class="digest-label" x="76" y="153">CONTRACT SEMANTIC SHA-256</text>
+  <text class="digest" x="290" y="153">e7c9ae9b5e0344bed4ad72c40a8524ab46df7afa7896c8a7240b582e35ef61be</text>
+  <g data-metric="projects">
+    <rect x="1410" y="58" width="140" height="92" rx="18" fill="#164e63"/>
+    <text class="metric-label" x="1480" y="86">PROJECTS</text>
+    <text class="metric-value" x="1480" y="127">7</text>
+  </g>
+  <g data-metric="themes">
+    <rect x="1570" y="58" width="140" height="92" rx="18" fill="#4c1d95"/>
+    <text class="metric-label" x="1640" y="86">THEMES</text>
+    <text class="metric-value" x="1640" y="127">4</text>
+  </g>
+  <text class="section" x="40" y="210">Recurring engineering constraints</text>
+  <g data-theme-id="bounded-inputs">
+<rect x="40" y="220" width="410" height="164" rx="18" fill="#cffafe" stroke="#0e7490" stroke-width="2"/>
+<circle cx="68" cy="254" r="10" fill="#0e7490"/>
+<text x="88" y="262" class="theme-title" textLength="156" lengthAdjust="spacingAndGlyphs">Bounded inputs</text>
+<text x="68" y="306" class="theme-copy" textLength="335" lengthAdjust="spacingAndGlyphs">Cap bytes, shapes, work, queues, and retained</text>
+<text x="68" y="330" class="theme-copy" textLength="164" lengthAdjust="spacingAndGlyphs">state before execution.</text>
+</g>
+<g data-theme-id="deterministic-replay">
+<rect x="470" y="220" width="410" height="164" rx="18" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+<circle cx="498" cy="254" r="10" fill="#6d28d9"/>
+<text x="518" y="262" class="theme-title" textLength="204" lengthAdjust="spacingAndGlyphs">Deterministic replay</text>
+<text x="498" y="306" class="theme-copy" textLength="293" lengthAdjust="spacingAndGlyphs">Make failures replayable from canonical,</text>
+<text x="498" y="330" class="theme-copy" textLength="166" lengthAdjust="spacingAndGlyphs">content-bound records.</text>
+</g>
+<g data-theme-id="independent-verification">
+<rect x="900" y="220" width="410" height="164" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<circle cx="928" cy="254" r="10" fill="#15803d"/>
+<text x="948" y="262" class="theme-title" textLength="243" lengthAdjust="spacingAndGlyphs">Independent verification</text>
+<text x="928" y="306" class="theme-copy" textLength="340" lengthAdjust="spacingAndGlyphs">Reconstruct or check claims through a separate</text>
+<text x="928" y="330" class="theme-copy" textLength="122" lengthAdjust="spacingAndGlyphs">verification path.</text>
+</g>
+<g data-theme-id="claim-boundaries">
+<rect x="1330" y="220" width="410" height="164" rx="18" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+<circle cx="1358" cy="254" r="10" fill="#b45309"/>
+<text x="1378" y="262" class="theme-title" textLength="176" lengthAdjust="spacingAndGlyphs">Claim boundaries</text>
+<text x="1358" y="306" class="theme-copy" textLength="330" lengthAdjust="spacingAndGlyphs">Publish explicit non-goals wherever evidence</text>
+<text x="1358" y="330" class="theme-copy" textLength="44" lengthAdjust="spacingAndGlyphs">stops.</text>
+</g>
+  <text class="section" x="40" y="414">Selected public systems</text>
+  <text class="section-note" x="430" y="414">Evidence surface + explicit boundary + pinned default-branch snapshot</text>
+  <g data-project-id="impactdiff" data-repository="omar07ibrahim/impactdiff" data-default-branch="main" data-commit-oid="66c1ed8e0134707903f70eb9727e674cd72d3dbd" data-theme-ids="bounded-inputs,deterministic-replay,claim-boundaries">
+<rect x="40" y="420" width="840" height="188" rx="18" class="project-card"/>
+<rect x="40" y="420" width="8" height="188" rx="4" fill="#0e7490"/>
+<text x="70" y="459" class="project-name" textLength="130" lengthAdjust="spacingAndGlyphs">ImpactDiff</text>
+<text x="70" y="485" class="project-meta" textLength="257" lengthAdjust="spacingAndGlyphs">Multimodal evaluation · TypeScript</text>
+<text x="70" y="516" class="row-label">FOCUS</text>
+<text x="194" y="516" class="row-value" textLength="261" lengthAdjust="spacingAndGlyphs">Task-aware visual change evidence</text>
+<text x="70" y="544" class="row-label">PUBLIC EVIDENCE</text>
+<text x="218" y="544" class="row-value" textLength="306" lengthAdjust="spacingAndGlyphs">Canonical capture and intervention records</text>
+<text x="70" y="572" class="row-label">BOUNDARY</text>
+<text x="194" y="572" class="boundary" textLength="301" lengthAdjust="spacingAndGlyphs">No benchmark or model-accuracy claim</text>
+<text x="70" y="597" class="ref" textLength="129" lengthAdjust="spacingAndGlyphs">main · 66c1ed8e0134</text>
+<rect x="350" y="579" width="76" height="26" rx="13" fill="#cffafe"/>
+<circle cx="363" cy="592" r="4" fill="#0e7490"/>
+<text x="373" y="597" class="chip">bounded</text>
+<rect x="434" y="579" width="72" height="26" rx="13" fill="#ede9fe"/>
+<circle cx="447" cy="592" r="4" fill="#6d28d9"/>
+<text x="457" y="597" class="chip">replay</text>
+<rect x="514" y="579" width="104" height="26" rx="13" fill="#fef3c7"/>
+<circle cx="527" cy="592" r="4" fill="#b45309"/>
+<text x="537" y="597" class="chip">bounded claim</text>
+</g>
+<g data-project-id="ssemaphore" data-repository="omar07ibrahim/ssemaphore" data-default-branch="main" data-commit-oid="9989ae0f081012496cecd7b9641a1f17acced0bd" data-theme-ids="bounded-inputs,independent-verification,claim-boundaries">
+<rect x="920" y="420" width="840" height="188" rx="18" class="project-card"/>
+<rect x="920" y="420" width="8" height="188" rx="4" fill="#0e7490"/>
+<text x="950" y="459" class="project-name" textLength="157" lengthAdjust="spacingAndGlyphs">SSemaphore</text>
+<text x="950" y="485" class="project-meta" textLength="230" lengthAdjust="spacingAndGlyphs">LLM serving infrastructure · Go</text>
+<text x="950" y="516" class="row-label">FOCUS</text>
+<text x="1074" y="516" class="row-value" textLength="269" lengthAdjust="spacingAndGlyphs">Bounded multi-tenant SSE admission</text>
+<text x="950" y="544" class="row-label">PUBLIC EVIDENCE</text>
+<text x="1098" y="544" class="row-value" textLength="231" lengthAdjust="spacingAndGlyphs">End-to-end wire and relay tests</text>
+<text x="950" y="572" class="row-label">BOUNDARY</text>
+<text x="1074" y="572" class="boundary" textLength="328" lengthAdjust="spacingAndGlyphs">No published throughput or RSS benchmark</text>
+<text x="950" y="597" class="ref" textLength="127" lengthAdjust="spacingAndGlyphs">main · 9989ae0f0810</text>
+<rect x="1230" y="579" width="76" height="26" rx="13" fill="#cffafe"/>
+<circle cx="1243" cy="592" r="4" fill="#0e7490"/>
+<text x="1253" y="597" class="chip">bounded</text>
+<rect x="1314" y="579" width="82" height="26" rx="13" fill="#dcfce7"/>
+<circle cx="1327" cy="592" r="4" fill="#15803d"/>
+<text x="1337" y="597" class="chip">verified</text>
+<rect x="1404" y="579" width="104" height="26" rx="13" fill="#fef3c7"/>
+<circle cx="1417" cy="592" r="4" fill="#b45309"/>
+<text x="1427" y="597" class="chip">bounded claim</text>
+</g>
+<g data-project-id="shardlift" data-repository="omar07ibrahim/shardlift" data-default-branch="main" data-commit-oid="b6491708082cb85772d79d1994c2f65a25f0992b" data-theme-ids="deterministic-replay,independent-verification,claim-boundaries">
+<rect x="40" y="625" width="840" height="188" rx="18" class="project-card"/>
+<rect x="40" y="625" width="8" height="188" rx="4" fill="#6d28d9"/>
+<text x="70" y="664" class="project-name" textLength="118" lengthAdjust="spacingAndGlyphs">ShardLift</text>
+<text x="70" y="690" class="project-meta" textLength="358" lengthAdjust="spacingAndGlyphs">Distributed training reliability · Python / PyTorch</text>
+<text x="70" y="721" class="row-label">FOCUS</text>
+<text x="194" y="721" class="row-value" textLength="275" lengthAdjust="spacingAndGlyphs">Sharded checkpoint crash consistency</text>
+<text x="70" y="749" class="row-label">PUBLIC EVIDENCE</text>
+<text x="218" y="749" class="row-value" textLength="257" lengthAdjust="spacingAndGlyphs">Crash and recovery JSON evidence</text>
+<text x="70" y="777" class="row-label">BOUNDARY</text>
+<text x="194" y="777" class="boundary" textLength="328" lengthAdjust="spacingAndGlyphs">Process crashes, not power-loss durability</text>
+<text x="70" y="802" class="ref" textLength="131" lengthAdjust="spacingAndGlyphs">main · b6491708082c</text>
+<rect x="350" y="784" width="72" height="26" rx="13" fill="#ede9fe"/>
+<circle cx="363" cy="797" r="4" fill="#6d28d9"/>
+<text x="373" y="802" class="chip">replay</text>
+<rect x="430" y="784" width="82" height="26" rx="13" fill="#dcfce7"/>
+<circle cx="443" cy="797" r="4" fill="#15803d"/>
+<text x="453" y="802" class="chip">verified</text>
+<rect x="520" y="784" width="104" height="26" rx="13" fill="#fef3c7"/>
+<circle cx="533" cy="797" r="4" fill="#b45309"/>
+<text x="543" y="802" class="chip">bounded claim</text>
+</g>
+<g data-project-id="tensorkiln" data-repository="omar07ibrahim/tensorkiln" data-default-branch="main" data-commit-oid="2549fb8e170c293bee7d34601ead863724bec20f" data-theme-ids="bounded-inputs,deterministic-replay,independent-verification,claim-boundaries">
+<rect x="920" y="625" width="840" height="188" rx="18" class="project-card"/>
+<rect x="920" y="625" width="8" height="188" rx="4" fill="#0e7490"/>
+<text x="950" y="664" class="project-name" textLength="139" lengthAdjust="spacingAndGlyphs">TensorKiln</text>
+<text x="950" y="690" class="project-meta" textLength="269" lengthAdjust="spacingAndGlyphs">Tensor compiler and runtime · C++20</text>
+<text x="950" y="721" class="row-label">FOCUS</text>
+<text x="1074" y="721" class="row-value" textLength="271" lengthAdjust="spacingAndGlyphs">Verified graph lowering and execution</text>
+<text x="950" y="749" class="row-label">PUBLIC EVIDENCE</text>
+<text x="1098" y="749" class="row-value" textLength="268" lengthAdjust="spacingAndGlyphs">Executable transcripts and five SVGs</text>
+<text x="950" y="777" class="row-label">BOUNDARY</text>
+<text x="1074" y="777" class="boundary" textLength="338" lengthAdjust="spacingAndGlyphs">Static f32 graph slice; no performance claim</text>
+<text x="950" y="802" class="ref" textLength="126" lengthAdjust="spacingAndGlyphs">main · 2549fb8e170c</text>
+<rect x="1230" y="784" width="76" height="26" rx="13" fill="#cffafe"/>
+<circle cx="1243" cy="797" r="4" fill="#0e7490"/>
+<text x="1253" y="802" class="chip">bounded</text>
+<rect x="1314" y="784" width="72" height="26" rx="13" fill="#ede9fe"/>
+<circle cx="1327" cy="797" r="4" fill="#6d28d9"/>
+<text x="1337" y="802" class="chip">replay</text>
+<rect x="1394" y="784" width="82" height="26" rx="13" fill="#dcfce7"/>
+<circle cx="1407" cy="797" r="4" fill="#15803d"/>
+<text x="1417" y="802" class="chip">verified</text>
+<rect x="1484" y="784" width="104" height="26" rx="13" fill="#fef3c7"/>
+<circle cx="1497" cy="797" r="4" fill="#b45309"/>
+<text x="1507" y="802" class="chip">bounded claim</text>
+</g>
+<g data-project-id="kvcrucible" data-repository="omar07ibrahim/kvcrucible" data-default-branch="main" data-commit-oid="a5d710259b05eaceafaeceabf3ad7dee145cb608" data-theme-ids="bounded-inputs,deterministic-replay,claim-boundaries">
+<rect x="40" y="830" width="840" height="188" rx="18" class="project-card"/>
+<rect x="40" y="830" width="8" height="188" rx="4" fill="#0e7490"/>
+<text x="70" y="869" class="project-name" textLength="143" lengthAdjust="spacingAndGlyphs">KVCrucible</text>
+<text x="70" y="895" class="project-meta" textLength="212" lengthAdjust="spacingAndGlyphs">AI inference reliability · Rust</text>
+<text x="70" y="926" class="row-label">FOCUS</text>
+<text x="194" y="926" class="row-value" textLength="248" lengthAdjust="spacingAndGlyphs">KV-cache metadata reconstruction</text>
+<text x="70" y="954" class="row-label">PUBLIC EVIDENCE</text>
+<text x="218" y="954" class="row-value" textLength="213" lengthAdjust="spacingAndGlyphs">Canonical fault-fold evidence</text>
+<text x="70" y="982" class="row-label">BOUNDARY</text>
+<text x="194" y="982" class="boundary" textLength="373" lengthAdjust="spacingAndGlyphs">Incomplete streams remain ineligible or unknown</text>
+<text x="70" y="1007" class="ref" textLength="130" lengthAdjust="spacingAndGlyphs">main · a5d710259b05</text>
+<rect x="350" y="989" width="76" height="26" rx="13" fill="#cffafe"/>
+<circle cx="363" cy="1002" r="4" fill="#0e7490"/>
+<text x="373" y="1007" class="chip">bounded</text>
+<rect x="434" y="989" width="72" height="26" rx="13" fill="#ede9fe"/>
+<circle cx="447" cy="1002" r="4" fill="#6d28d9"/>
+<text x="457" y="1007" class="chip">replay</text>
+<rect x="514" y="989" width="104" height="26" rx="13" fill="#fef3c7"/>
+<circle cx="527" cy="1002" r="4" fill="#b45309"/>
+<text x="537" y="1007" class="chip">bounded claim</text>
+</g>
+<g data-project-id="peftlint" data-repository="omar07ibrahim/peftlint" data-default-branch="main" data-commit-oid="348b0ab9ef0fa5f1609e65ed7cdff51309345d94" data-theme-ids="bounded-inputs,independent-verification,claim-boundaries">
+<rect x="920" y="830" width="840" height="188" rx="18" class="project-card"/>
+<rect x="920" y="830" width="8" height="188" rx="4" fill="#0e7490"/>
+<text x="950" y="869" class="project-name" textLength="90" lengthAdjust="spacingAndGlyphs">peftlint</text>
+<text x="950" y="895" class="project-meta" textLength="222" lengthAdjust="spacingAndGlyphs">Model artifact tooling · Python</text>
+<text x="950" y="926" class="row-label">FOCUS</text>
+<text x="1074" y="926" class="row-value" textLength="281" lengthAdjust="spacingAndGlyphs">Bounded adapter compatibility preflight</text>
+<text x="950" y="954" class="row-label">PUBLIC EVIDENCE</text>
+<text x="1098" y="954" class="row-value" textLength="221" lengthAdjust="spacingAndGlyphs">Static LoRA inventory findings</text>
+<text x="950" y="982" class="row-label">BOUNDARY</text>
+<text x="1074" y="982" class="boundary" textLength="304" lengthAdjust="spacingAndGlyphs">No full model-load compatibility verdict</text>
+<text x="950" y="1007" class="ref" textLength="122" lengthAdjust="spacingAndGlyphs">main · 348b0ab9ef0f</text>
+<rect x="1230" y="989" width="76" height="26" rx="13" fill="#cffafe"/>
+<circle cx="1243" cy="1002" r="4" fill="#0e7490"/>
+<text x="1253" y="1007" class="chip">bounded</text>
+<rect x="1314" y="989" width="82" height="26" rx="13" fill="#dcfce7"/>
+<circle cx="1327" cy="1002" r="4" fill="#15803d"/>
+<text x="1337" y="1007" class="chip">verified</text>
+<rect x="1404" y="989" width="104" height="26" rx="13" fill="#fef3c7"/>
+<circle cx="1417" cy="1002" r="4" fill="#b45309"/>
+<text x="1427" y="1007" class="chip">bounded claim</text>
+</g>
+<g data-project-id="orthodrift" data-repository="omar07ibrahim/orthodrift" data-default-branch="main" data-commit-oid="5e49fa7a7459c41d04dbb5a196551e59c156aba7" data-theme-ids="deterministic-replay,independent-verification,claim-boundaries">
+<rect x="40" y="1035" width="840" height="188" rx="18" class="project-card"/>
+<rect x="40" y="1035" width="8" height="188" rx="4" fill="#6d28d9"/>
+<text x="70" y="1074" class="project-name" textLength="127" lengthAdjust="spacingAndGlyphs">OrthoDrift</text>
+<text x="70" y="1100" class="project-meta" textLength="212" lengthAdjust="spacingAndGlyphs">Retrieval evaluation · Python</text>
+<text x="70" y="1131" class="row-label">FOCUS</text>
+<text x="194" y="1131" class="row-value" textLength="270" lengthAdjust="spacingAndGlyphs">Minimal grapheme-level rank failures</text>
+<text x="70" y="1159" class="row-label">PUBLIC EVIDENCE</text>
+<text x="218" y="1159" class="row-value" textLength="274" lengthAdjust="spacingAndGlyphs">Replayable retrieval JSONL evidence</text>
+<text x="70" y="1187" class="row-label">BOUNDARY</text>
+<text x="194" y="1187" class="boundary" textLength="341" lengthAdjust="spacingAndGlyphs">Azerbaijani first lane; no semantic guarantee</text>
+<text x="70" y="1212" class="ref" textLength="126" lengthAdjust="spacingAndGlyphs">main · 5e49fa7a7459</text>
+<rect x="350" y="1194" width="72" height="26" rx="13" fill="#ede9fe"/>
+<circle cx="363" cy="1207" r="4" fill="#6d28d9"/>
+<text x="373" y="1212" class="chip">replay</text>
+<rect x="430" y="1194" width="82" height="26" rx="13" fill="#dcfce7"/>
+<circle cx="443" cy="1207" r="4" fill="#15803d"/>
+<text x="453" y="1212" class="chip">verified</text>
+<rect x="520" y="1194" width="104" height="26" rx="13" fill="#fef3c7"/>
+<circle cx="533" cy="1207" r="4" fill="#b45309"/>
+<text x="543" y="1212" class="chip">bounded claim</text>
+</g>
+<g data-card-kind="scope-boundary">
+<rect x="920" y="1035" width="840" height="188" rx="18" fill="#111827"/>
+<text x="950" y="1076" class="scope-title">HOW TO READ THIS MAP</text>
+<text x="950" y="1113" class="scope-copy" textLength="481" lengthAdjust="spacingAndGlyphs">Curated navigation snapshot of public default-branch work; not</text>
+<text x="950" y="1138" class="scope-copy" textLength="311" lengthAdjust="spacingAndGlyphs">a benchmark or remote-state attestation.</text>
+<text x="950" y="1178" class="scope-note">Refs are reviewed snapshots, not live remote-state attestations.</text>
+<text x="950" y="1204" class="scope-note">No benchmark score, hiring claim, or execution result is inferred.</text>
+</g>
+  <rect class="footer" x="40" y="1260" width="1720" height="120" rx="18"/>
+  <text class="footer-title" x="70" y="1300">SOURCE-DERIVED NAVIGATION, NOT A SCORECARD</text>
+  <text class="footer-copy" x="70" y="1331">Generated from portfolio/projects.v1.json. Every card preserves one public evidence surface and one non-goal.</text>
+  <text class="footer-copy" x="70" y="1358">Reproduce: python3 tools/render_portfolio_map.py --check · exact sources and output SHA-256 are bound in the adjacent manifest.</text>
+</svg>
