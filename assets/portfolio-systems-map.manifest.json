@@ -50,7 +50,7 @@
       },
       {
         "claim_boundary": "Static f32 graph slice; no performance claim",
-        "commit_oid": "2549fb8e170c293bee7d34601ead863724bec20f",
+        "commit_oid": "b974c036a2e0c912515c8f7f52661edff06d7eb0",
         "default_branch": "main",
         "evidence_surface": "Executable transcripts and five SVGs",
         "id": "tensorkiln",
@@ -102,7 +102,7 @@
         ]
       }
     ],
-    "semantic_sha256": "e7c9ae9b5e0344bed4ad72c40a8524ab46df7afa7896c8a7240b582e35ef61be",
+    "semantic_sha256": "466e25ff35bed3eb4987e8196bb08c97e4ade09a5c928d1c30eebcd0502dd8cc",
     "theme_count": 4,
     "theme_ids": [
       "bounded-inputs",
@@ -116,7 +116,7 @@
       "bytes": 20728,
       "media_type": "image/svg+xml",
       "path": "assets/portfolio-systems-map.svg",
-      "sha256": "0b48547fb9142f04e014493a1fc87787b98fc9dc2d4221d59e07add5aa4b1e0a"
+      "sha256": "e869f1791b3ec0c49cd4a23983624a6437d06b9a8aaf7dcbc6a15cabb313ce5d"
     }
   ],
   "schema_version": 1,
@@ -124,7 +124,7 @@
     {
       "bytes": 5563,
       "path": "portfolio/projects.v1.json",
-      "sha256": "636fba650879f214512007a707779613697be7a7d6f5602a7766d3e606c84717"
+      "sha256": "5fa310784514c9e39e79187c47fcbecf2b55da5101195755422c6de6375917c1"
     },
     {
       "bytes": 12052,

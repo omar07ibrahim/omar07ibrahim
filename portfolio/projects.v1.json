@@ -57,7 +57,7 @@
     },
     {
       "claim_boundary": "Static f32 graph slice; no performance claim",
-      "commit_oid": "2549fb8e170c293bee7d34601ead863724bec20f",
+      "commit_oid": "b974c036a2e0c912515c8f7f52661edff06d7eb0",
       "default_branch": "main",
       "domain": "Tensor compiler and runtime",
       "evidence_surface": "Executable transcripts and five SVGs",
