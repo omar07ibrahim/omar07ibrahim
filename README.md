@@ -1,168 +1,117 @@
 # Omar Ibrahim
 
-I build reliable AI systems across multimodal evaluation, browser automation,
-compiler/runtime infrastructure, inference reliability, and model tooling. I am
-especially interested in failures at system boundaries: unreliable event
-streams, model-artifact mismatches, unverified storage assumptions, ambiguous
-evidence, and real inputs that clean benchmarks miss.
+I build reliable AI systems where model behavior meets browsers, streaming
+protocols, storage, compilers, and experimental evidence. My work favors
+bounded inputs, deterministic replay, independent verification, and explicit
+claim limits.
 
-My projects turn those failures into bounded, reproducible experiments with
-explicit trust assumptions and machine-checkable results.
+This profile is a fast path through seven current systems projects. Each
+summary below names the public evidence that exists today and the conclusion
+that evidence does not support.
 
 ## Systems map
 
 ![Source-derived map of seven selected public AI systems projects, their evidence surfaces, and claim boundaries](assets/portfolio-systems-map.svg)
 
-*Curated portfolio navigation.* Every project card comes from the strict
-[`portfolio/projects.v1.json`](portfolio/projects.v1.json) contract and shows
-one public evidence surface, one explicit non-goal, and the reviewed
-default-branch commit snapshot. This is not a benchmark scorecard or a live
-remote-state attestation.
+*Curated portfolio navigation.* The strict
+[`portfolio/projects.v1.json`](portfolio/projects.v1.json) source binds every
+card to a reviewed default-branch commit, one public evidence surface, and one
+explicit non-goal. It is not a benchmark scorecard or live remote-state
+attestation.
 
-Reproduce the SVG and verify its exact source/output manifest:
+Reproduce the SVG and verify its exact two-file bundle:
 
 ```bash
 python3 tools/render_portfolio_map.py --check
 ```
 
 The adjacent
-[`portfolio-systems-map.manifest.json`](assets/portfolio-systems-map.manifest.json)
-binds the contract, renderer, canonical semantic digest, all seven refs, and
-the SVG bytes.
+[manifest](assets/portfolio-systems-map.manifest.json) binds the contract,
+renderer, semantic digest, seven immutable refs, and SVG bytes.
 
-## Selected work
+## Selected systems
 
-### [ImpactDiff](https://github.com/omar07ibrahim/impactdiff) · TypeScript · Multimodal ML evaluation
+### [ImpactDiff](https://github.com/omar07ibrahim/impactdiff) · TypeScript · Multimodal evaluation
 
-ImpactDiff is a research lab for task-aware visual regression: whether a UI
-change breaks a user task or damages accessibility, rather than merely changing
-pixels. It captures canonical screenshots, accessibility trees, and bounded
-layout graphs around a real coordinate-driven task, while storing model-visible
-evidence separately from intervention metadata, execution traces, and labels.
-
-The current milestone runs baseline and mutated candidates in distinct fresh
-BrowserContexts under one verified Chromium environment, compiles and rolls
-back typed palette and pointer interventions, derives and replays complete
-evidence records, and atomically publishes immutable visible/sealed release
-pairs. The Node 22 and 24 CI lanes exercise capture, provenance, recovery, and
-publication boundaries. A multi-application dataset, isolated
-feature runner, trained models, and benchmark result remain the next research
-milestone; the repository makes no accuracy claim today.
+Task-aware browser-change evidence for asking whether a visual change breaks a
+user workflow or accessibility surface. The current authoring bundle contains
+two synthetic applications, four workflows, and 12 real deterministic Chromium
+checkpoints with accessibility, layout, action, provenance, and manifest
+records. It contains no official pair, released dataset, trained model,
+benchmark result, or accuracy claim.
 
 ### [SSemaphore](https://github.com/omar07ibrahim/ssemaphore) · Go · LLM serving infrastructure
 
-SSemaphore is a correctness-first local gateway for bounded, multi-tenant Chat
-Completions traffic. Its admission path combines estimated-service accounting
-with work-deficit round robin scheduling, explicit queue and body budgets,
-disconnect-aware cancellation, and a fixed upstream transport boundary.
+A Linux loopback gateway for bounded multi-tenant Chat Completions traffic,
+weighted-deficit admission, validated buffered/SSE relay, cancellation, and
+signal-owned shutdown. Public evidence covers one controlled loopback workflow
+and one fixed-seed 28-job saturation run whose dispatches match an independent
+bounded oracle. It does not report throughput, latency, RSS, a fairness score,
+or a service-share benchmark.
 
-The runnable gateway accepts a strict versioned policy from a private Linux
-file, consumes bearer credentials through one-shot environment references, and
-binds only to an exact numeric loopback address. End-to-end wire tests cover
-admission, authenticated forwarding, signal-owned shutdown, and listener
-cleanup; the release gate also exercises the race detector and 32-bit checked
-arithmetic.
+### [RunnelMoE](https://github.com/omar07ibrahim/runnelmoe) · Rust / Python · Sparse MoE inference
 
-Its bounded SSE relay validates one `data:` event at a time under total,
-per-event, count, idle-read, event, and total deadlines. It flushes validated
-chunks with bounded read-ahead, keeps the admission permit through a clean
-`[DONE]` and EOF, and separates pre-commit gateway errors from post-commit
-stream truncation. A real loopback test proves that the first chunk reaches the
-client before the upstream response completes.
-
-### [ShardLift](https://github.com/omar07ibrahim/shardlift) · Python/PyTorch · Distributed training reliability
-
-ShardLift is a Linux crash-consistency lab for sharded training state. Its
-`killer-demo` kills an isolated checkpoint publisher with a real `SIGKILL`,
-recovers from verified immutable commit records, continues the recovered
-four-worker state, reshards it offline from four workers to three, and compares
-the result with an uninterrupted trajectory using logical-state roots and exact
-fixed-probe logits.
-
-The canonical CPython 3.14 evidence lane runs both public crash barriers from a
-hash-locked wheel and PyTorch CPU runtime, re-verifies the retained bundles, and
-publishes the evidence and runtime provenance. Separate Python 3.11–3.14 lanes
-exercise the core package, typing, coverage, and clean wheel install. The claim
-is deliberately limited to process crashes on the recorded environment; it is
-not a power-loss durability or production-training claim.
+A model-agnostic laboratory for verified out-of-core expert storage, bounded
+DRAM caching, cache-policy research, and a narrow BF16/AVX2 kernel. The closed
+M1-M4 bundle exposes captured command output, raw evidence, source-bound
+visuals, and explicit milestone reviews. Its M3 evidence measures synthetic
+modeled traffic, and M4 covers fixed synthetic GEMV batches on one recorded
+host; neither is an end-to-end inference or serving-speed claim.
 
 ### [TensorKiln](https://github.com/omar07ibrahim/tensorkiln) · C++20 · Tensor compiler/runtime
 
-TensorKiln is a dependency-free compiler for static `f32` tensor graphs. Its
-current vertical slice includes checked rank 0-4 types, transactional graph
-construction, batched `MatMul` and broadcasting, an independent reference
-interpreter, dead-code elimination, and exact structural canonicalization with
-composable provenance.
+A dependency-free static `f32` compiler/runtime with checked graphs, explicit
+rewrites, reverse-verified arena planning, independently reconstructed
+execution plans, guarded allocation-free sessions, and a separate reference
+interpreter. Real release-CLI transcripts and a three-frame workflow exercise
+two compiled-in workloads, including a six-step ReGLU slice with exact output
+agreement. The project makes no benchmark, general-model, or full-transformer
+claim.
 
-The released alpha's graph-to-arena boundary derives compute lifetimes, applies
-a deterministic 64-byte interval planner, and returns a storage projection only
-after an independently coded reverse verifier reconstructs and agrees with
-every mapping, request, statistic, and allocation.
+### [FalseWake](https://github.com/omar07ibrahim/falsewake) · Python / PyTorch · Streaming keyword spotting
 
-The merged [verified execution milestone](https://github.com/omar07ibrahim/tensorkiln/pull/10)
-builds a minimal kernel/placement candidate and independently reconstructs its
-operands, dense layouts, storage, lifetimes, limits, and work before execution.
-Its arena session rejects invalid floating-point environments, guards every
-non-empty workspace, audits exact kernel write sets, and keeps repeated
-execution allocation-free under wrapped C/C++ allocators.
+An open-set keyword-spotting research system built around the failure mode that
+clip accuracy misses: false activations on continuous unrelated speech.
+Experiments 000 and 001 provide the measured linear baseline and development
+replay; all 1,001 registered thresholds failed the joint retention and
+false-event gates. Experiments 002-006 are retained engineering and incident
+evidence only: they produced no valid neural metric, reusable checkpoint, ONNX
+result, or continuous-replay score.
 
-Axis-aware `Softmax` now has deterministic reference semantics for every valid
-rank 1–4 axis and a separately verified allocation-free last-axis kernel. A
-real release binary publishes the complete five-slice finite/NaN/infinity
-policy output; an 80-digit `Decimal` oracle and 96 deterministic seeds check
-the optimized boundary. Five self-contained SVGs, three raw terminal
-transcripts, and a SHA-256 manifest make the architecture, arena reuse,
-reproduction workflow, and runtime results visible on the default branch.
-GCC/Clang, sanitizers, clean shallow clones, 217 C++ tests, and 20 visual
-contract tests guard the milestone; it deliberately makes no benchmark claim.
+### [StrataFold](https://github.com/omar07ibrahim/stratafold) · Python · MoE compression research
 
-### [KVCrucible](https://github.com/omar07ibrahim/kvcrucible) · Rust · AI inference reliability
+A clean-room lab for structural expert compression without silently relabeling
+dtype changes as compression. Its current M1 result is a pinned, bounded
+official-metadata target genome with raw records, a deliberate rejection path,
+and an 11-file visual atlas. No full checkpoint was downloaded or run, so M1
+makes no compression-ratio, quality, throughput, active-compute, or
+state-of-the-art claim.
 
-KVCrucible is an offline conformance lab for reconstructing LLM KV-cache
-metadata from unreliable publisher streams. Its bounded Rust core validates
-canonical JSONL and tracks per-publisher `Exact` / `Recovering` / `Unknown`
-state. It materializes deterministic drop, duplicate, and reorder schedules,
-then compares fresh pristine and faulted folds without turning incomplete
-evidence into a false divergence claim.
+### [PEFTLint](https://github.com/omar07ibrahim/peftlint) · Python · Model artifact tooling
 
-The implementation includes opaque semantic fingerprints, atomic cache-view
-projection, property-tested fault materialization, a first-class per-stream
-convergence oracle, and a statically linked musl release gate.
+A fail-closed local preflight for PEFT LoRA checkpoints that inventories
+components, parses pinned configuration and safetensors headers, and emits
+deterministic structural evidence without importing model code or reading
+tensor payload bytes. Eight real CLI cases expose the current 8-of-17 rule
+slice. Even a clean run remains `UNKNOWN`; it is not proof that an adapter can
+load against a base model.
 
-### [peftlint](https://github.com/omar07ibrahim/peftlint) · Python · Model artifact tooling
+## Additional maintained systems
 
-peftlint moves LoRA adapter failures into a bounded preflight step without
-importing model code or allocating model tensors. The current vertical slice
-ships pure parsers for pinned PEFT adapter configurations and safetensors
-manifests, including duplicate-key rejection, explicit byte and JSON budgets,
-checked tensor-shape arithmetic, span validation, and payload-coverage proofs.
-
-The merged [inventory milestone](https://github.com/omar07ibrahim/peftlint/pull/4)
-turns those immutable manifests into exact, path-scoped evidence for saved LoRA
-pair closure, dimensions, and configured rank. It distinguishes modeled
-two-dimensional weight pairs from higher-rank convolution candidates, which
-remain `Unknown` instead of being mislabeled as incompatible. The evaluator
-imports neither PEFT nor Torch, reads no tensor payload, and never executes a
-retained rank-pattern regex.
-
-The versioned compatibility contract keeps these findings separate from a full
-load verdict: base topology, selection, dtype, saved-module, and vocabulary
-evidence remain explicit future dependencies.
-
-### [OrthoDrift](https://github.com/omar07ibrahim/orthodrift) · Python · Retrieval evaluation
-
-OrthoDrift finds minimal grapheme-level changes that make a retriever lose the
-relevant document. Its first research lane is Azerbaijani retrieval, while its
-core text and provenance machinery remains language-agnostic.
-
-The current implementation runs deterministic BM25 experiments, reduces rank
-failures to minimal counterexamples, and emits self-contained JSONL evidence
-that can be independently replayed and verified against its recorded runtime
-environment.
+[ShardLift](https://github.com/omar07ibrahim/shardlift) ·
+[KVCrucible](https://github.com/omar07ibrahim/kvcrucible) ·
+[RecallLedger / `note`](https://github.com/omar07ibrahim/note) ·
+[UnitSentinel / `units`](https://github.com/omar07ibrahim/units) ·
+[Casefold / `case`](https://github.com/omar07ibrahim/case) ·
+[PasswordGenerator](https://github.com/omar07ibrahim/PasswordGenerator) ·
+[GWorker](https://github.com/omar07ibrahim/GWorker) ·
+[WitnessGap](https://github.com/omar07ibrahim/witnessgap) ·
+[A1220](https://github.com/omar07ibrahim/A1220-lab1-omar07ibrahim)
 
 ## Engineering approach
 
-- State the trust boundary, uncertainty, and non-goals before making a claim.
-- Bound untrusted input, retained state, and diagnostic work before execution.
-- Prefer deterministic state machines, property tests, golden vectors, pinned
-  toolchains, and machine-readable evidence over screenshot-only demos.
+- State the trust boundary and non-goal before making a claim.
+- Bound bytes, shapes, work, queues, retained state, and diagnostics.
+- Prefer deterministic state machines, property tests, pinned toolchains, and
+  machine-readable evidence.
+- Keep optimized paths answerable to a separate reference or verifier.

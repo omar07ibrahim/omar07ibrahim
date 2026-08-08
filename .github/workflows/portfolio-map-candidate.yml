@@ -1,0 +1,224 @@
+name: Portfolio map candidate
+
+on:
+  push:
+    branches:
+      - profile/reproducible-systems-map
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-map-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  LANG: C.UTF-8
+  LC_ALL: C.UTF-8
+  PYTHONDONTWRITEBYTECODE: "1"
+  PYTHONHASHSEED: "0"
+  PYTHONUTF8: "1"
+  TZ: UTC
+
+jobs:
+  render:
+    name: Render exact candidate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      artifact_id: ${{ steps.upload.outputs.artifact-id }}
+
+    steps:
+      - name: Check out the exact pushed revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up exact Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.3"
+
+      - name: Assert the immutable source checkout
+        env:
+          EXPECTED_BASE: 3a9d4558c0c4bbda536cd731064d86694d756eb4
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_EVENT_NAME" = "push"
+          test "$GITHUB_REF" = "refs/heads/profile/reproducible-systems-map"
+          [[ "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]]
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          git cat-file -e "$EXPECTED_BASE^{commit}"
+          git merge-base --is-ancestor "$EXPECTED_BASE" HEAD
+          test -z "$(git status --porcelain=v1 --untracked-files=all)"
+          python - <<'PY'
+          import platform
+
+          assert platform.python_implementation() == "CPython"
+          assert platform.python_version() == "3.12.3"
+          PY
+
+      - name: Render the closed bundle twice
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          for directory in \
+            "$RUNNER_TEMP/portfolio-map-first" \
+            "$RUNNER_TEMP/portfolio-map-second"
+          do
+            CANDIDATE_DIRECTORY="$directory" python - <<'PY'
+          import os
+          from pathlib import Path
+
+          from tools.render_portfolio_map import ROOT, build_bundle
+
+          destination = Path(os.environ["CANDIDATE_DIRECTORY"])
+          destination.mkdir(mode=0o700)
+          bundle = build_bundle(ROOT)
+          for relative_path, payload in bundle.items():
+              target = destination / Path(relative_path).name
+              target.write_bytes(payload)
+              target.chmod(0o644)
+          PY
+          done
+
+      - name: Verify exact candidate inventories and replay
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected="$(printf '%s\n' \
+            portfolio-systems-map.manifest.json \
+            portfolio-systems-map.svg)"
+          for directory in \
+            "$RUNNER_TEMP/portfolio-map-first" \
+            "$RUNNER_TEMP/portfolio-map-second"
+          do
+            actual="$(
+              find "$directory" \
+                -mindepth 1 -maxdepth 1 -type f -printf '%f\n' \
+                | LC_ALL=C sort
+            )"
+            test "$actual" = "$expected"
+            test -z "$(
+              find "$directory" \
+                -mindepth 1 -maxdepth 1 ! -type f -print -quit
+            )"
+          done
+          for name in \
+            portfolio-systems-map.manifest.json \
+            portfolio-systems-map.svg
+          do
+            cmp -- \
+              "$RUNNER_TEMP/portfolio-map-first/$name" \
+              "$RUNNER_TEMP/portfolio-map-second/$name"
+          done
+          python tools/verify_portfolio_map_candidate.py \
+            --bundle "$RUNNER_TEMP/portfolio-map-first"
+
+      - name: Run the complete tests against the candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          install -m 0644 \
+            "$RUNNER_TEMP/portfolio-map-first/portfolio-systems-map.svg" \
+            assets/portfolio-systems-map.svg
+          install -m 0644 \
+            "$RUNNER_TEMP/portfolio-map-first/portfolio-systems-map.manifest.json" \
+            assets/portfolio-systems-map.manifest.json
+          python tools/render_portfolio_map.py --check
+          python -m unittest discover -s tests -p 'test_*.py' -v
+
+      - name: Enforce the generated-output boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --check
+          actual="$(git diff --name-only -- . | LC_ALL=C sort)"
+          expected="$(printf '%s\n' \
+            assets/portfolio-systems-map.manifest.json \
+            assets/portfolio-systems-map.svg)"
+          test -z "$actual" || test "$actual" = "$expected"
+          test -z "$(git diff --cached --name-only -- .)"
+          test -z "$(git ls-files --others --exclude-standard)"
+
+      - name: Upload the exact candidate bundle
+        id: upload
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: portfolio-map-candidate-${{ github.sha }}
+          path: ${{ runner.temp }}/portfolio-map-first/
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
+          include-hidden-files: false
+
+  verify-download:
+    name: Independently verify downloaded candidate
+    needs: render
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out the exact pushed revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up exact Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.3"
+
+      - name: Assert exact head and artifact identity
+        env:
+          ARTIFACT_ID: ${{ needs.render.outputs.artifact_id }}
+          EXPECTED_BASE: 3a9d4558c0c4bbda536cd731064d86694d756eb4
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_EVENT_NAME" = "push"
+          test "$GITHUB_REF" = "refs/heads/profile/reproducible-systems-map"
+          [[ "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$ARTIFACT_ID" =~ ^[0-9]+$ ]]
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          git merge-base --is-ancestor "$EXPECTED_BASE" HEAD
+          test -z "$(git status --porcelain=v1 --untracked-files=all)"
+          python - <<'PY'
+          import platform
+
+          assert platform.python_implementation() == "CPython"
+          assert platform.python_version() == "3.12.3"
+          PY
+
+      - name: Download by immutable artifact ID
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          artifact-ids: ${{ needs.render.outputs.artifact_id }}
+          path: ${{ runner.temp }}/portfolio-map-downloaded
+
+      - name: Verify the closed downloaded bundle independently
+        shell: bash
+        run: |
+          set -euo pipefail
+          directory="$RUNNER_TEMP/portfolio-map-downloaded"
+          expected="$(printf '%s\n' \
+            portfolio-systems-map.manifest.json \
+            portfolio-systems-map.svg)"
+          actual="$(
+            find "$directory" \
+              -mindepth 1 -maxdepth 1 -type f -printf '%f\n' \
+              | LC_ALL=C sort
+          )"
+          test "$actual" = "$expected"
+          test -z "$(
+            find "$directory" \
+              -mindepth 1 -maxdepth 1 ! -type f -print -quit
+          )"
+          python tools/verify_portfolio_map_candidate.py --bundle "$directory"
+          test -z "$(git status --porcelain=v1 --untracked-files=all)"

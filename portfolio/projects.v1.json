@@ -2,12 +2,12 @@
   "format": "omar.portfolio_map.v1",
   "projects": [
     {
-      "claim_boundary": "No benchmark or model-accuracy claim",
-      "commit_oid": "66c1ed8e0134707903f70eb9727e674cd72d3dbd",
+      "claim_boundary": "Authoring evidence only; no dataset, model, benchmark, or accuracy claim",
+      "commit_oid": "4fb56ee34b74f994d7dc3714443dfc8b25e45936",
       "default_branch": "main",
       "domain": "Multimodal evaluation",
-      "evidence_surface": "Canonical capture and intervention records",
-      "focus": "Task-aware visual change evidence",
+      "evidence_surface": "12 Chromium checkpoints and a bound evidence manifest",
+      "focus": "Task-aware browser change evidence",
       "id": "impactdiff",
       "language": "TypeScript",
       "name": "ImpactDiff",
@@ -20,11 +20,11 @@
       "url": "https://github.com/omar07ibrahim/impactdiff"
     },
     {
-      "claim_boundary": "No published throughput or RSS benchmark",
-      "commit_oid": "9989ae0f081012496cecd7b9641a1f17acced0bd",
+      "claim_boundary": "One synthetic run; no throughput, latency, RSS, or fairness score",
+      "commit_oid": "6a4974d01bc5e74307fb4dee192b0b8a752e6274",
       "default_branch": "main",
       "domain": "LLM serving infrastructure",
-      "evidence_surface": "End-to-end wire and relay tests",
+      "evidence_surface": "Loopback and fixed-seed 28-job saturation evidence",
       "focus": "Bounded multi-tenant SSE admission",
       "id": "ssemaphore",
       "language": "Go",
@@ -38,30 +38,31 @@
       "url": "https://github.com/omar07ibrahim/ssemaphore"
     },
     {
-      "claim_boundary": "Process crashes, not power-loss durability",
-      "commit_oid": "b6491708082cb85772d79d1994c2f65a25f0992b",
+      "claim_boundary": "Synthetic slices; no end-to-end inference or serving speedup claim",
+      "commit_oid": "efaf38f10c1625d745eeb354c15ebe9b9b77611f",
       "default_branch": "main",
-      "domain": "Distributed training reliability",
-      "evidence_surface": "Crash and recovery JSON evidence",
-      "focus": "Sharded checkpoint crash consistency",
-      "id": "shardlift",
-      "language": "Python / PyTorch",
-      "name": "ShardLift",
-      "repository": "omar07ibrahim/shardlift",
+      "domain": "Sparse MoE inference",
+      "evidence_surface": "Closed M1-M4 captures and raw M3-M4 evidence",
+      "focus": "Out-of-core MoE runtime experiments",
+      "id": "runnelmoe",
+      "language": "Rust / Python",
+      "name": "RunnelMoE",
+      "repository": "omar07ibrahim/runnelmoe",
       "themes": [
+        "bounded-inputs",
         "deterministic-replay",
         "independent-verification",
         "claim-boundaries"
       ],
-      "url": "https://github.com/omar07ibrahim/shardlift"
+      "url": "https://github.com/omar07ibrahim/runnelmoe"
     },
     {
-      "claim_boundary": "Static f32 graph slice; no performance claim",
-      "commit_oid": "b974c036a2e0c912515c8f7f52661edff06d7eb0",
+      "claim_boundary": "Narrow static f32 slice; no benchmark or full-transformer claim",
+      "commit_oid": "32c078a4c07f553abce9373aeb2ff8b601f23d8f",
       "default_branch": "main",
       "domain": "Tensor compiler and runtime",
-      "evidence_surface": "Executable transcripts and five SVGs",
-      "focus": "Verified graph lowering and execution",
+      "evidence_surface": "Release CLI transcripts, GIF, and source-bound manifest",
+      "focus": "Verified static f32 graph execution",
       "id": "tensorkiln",
       "language": "C++20",
       "name": "TensorKiln",
@@ -75,33 +76,53 @@
       "url": "https://github.com/omar07ibrahim/tensorkiln"
     },
     {
-      "claim_boundary": "Incomplete streams remain ineligible or unknown",
-      "commit_oid": "a5d710259b05eaceafaeceabf3ad7dee145cb608",
+      "claim_boundary": "Neural experiments 002-006 yielded no valid metric or reusable checkpoint",
+      "commit_oid": "84389cda0bd7b715e166273d52640d16d84f5c4c",
       "default_branch": "main",
-      "domain": "AI inference reliability",
-      "evidence_surface": "Canonical fault-fold evidence",
-      "focus": "KV-cache metadata reconstruction",
-      "id": "kvcrucible",
-      "language": "Rust",
-      "name": "KVCrucible",
-      "repository": "omar07ibrahim/kvcrucible",
+      "domain": "Streaming keyword spotting",
+      "evidence_surface": "Experiments 000-001 reports and failed-run lineage",
+      "focus": "Continuous-speech false-activation measurement",
+      "id": "falsewake",
+      "language": "Python / PyTorch",
+      "name": "FalseWake",
+      "repository": "omar07ibrahim/falsewake",
       "themes": [
         "bounded-inputs",
         "deterministic-replay",
+        "independent-verification",
         "claim-boundaries"
       ],
-      "url": "https://github.com/omar07ibrahim/kvcrucible"
+      "url": "https://github.com/omar07ibrahim/falsewake"
     },
     {
-      "claim_boundary": "No full model-load compatibility verdict",
-      "commit_oid": "348b0ab9ef0fa5f1609e65ed7cdff51309345d94",
+      "claim_boundary": "Metadata only; no checkpoint run, compression ratio, quality, or speed claim",
+      "commit_oid": "3086247ab991571d377fd9b2b0773cd40c6a2441",
+      "default_branch": "main",
+      "domain": "MoE compression research",
+      "evidence_surface": "M1 target-genome records and 11-file visual atlas",
+      "focus": "Pinned target metadata validation",
+      "id": "stratafold",
+      "language": "Python",
+      "name": "StrataFold",
+      "repository": "omar07ibrahim/stratafold",
+      "themes": [
+        "bounded-inputs",
+        "deterministic-replay",
+        "independent-verification",
+        "claim-boundaries"
+      ],
+      "url": "https://github.com/omar07ibrahim/stratafold"
+    },
+    {
+      "claim_boundary": "Structural evidence only; full load compatibility remains UNKNOWN",
+      "commit_oid": "ee72ce7a48edbfe3df9b463cc54583a2b8a6529b",
       "default_branch": "main",
       "domain": "Model artifact tooling",
-      "evidence_surface": "Static LoRA inventory findings",
-      "focus": "Bounded adapter compatibility preflight",
+      "evidence_surface": "Eight real CLI captures and an 8-of-17 rule matrix",
+      "focus": "Fail-closed LoRA checkpoint admission",
       "id": "peftlint",
       "language": "Python",
-      "name": "peftlint",
+      "name": "PEFTLint",
       "repository": "omar07ibrahim/peftlint",
       "themes": [
         "bounded-inputs",
@@ -109,24 +130,6 @@
         "claim-boundaries"
       ],
       "url": "https://github.com/omar07ibrahim/peftlint"
-    },
-    {
-      "claim_boundary": "Azerbaijani first lane; no semantic guarantee",
-      "commit_oid": "5e49fa7a7459c41d04dbb5a196551e59c156aba7",
-      "default_branch": "main",
-      "domain": "Retrieval evaluation",
-      "evidence_surface": "Replayable retrieval JSONL evidence",
-      "focus": "Minimal grapheme-level rank failures",
-      "id": "orthodrift",
-      "language": "Python",
-      "name": "OrthoDrift",
-      "repository": "omar07ibrahim/orthodrift",
-      "themes": [
-        "deterministic-replay",
-        "independent-verification",
-        "claim-boundaries"
-      ],
-      "url": "https://github.com/omar07ibrahim/orthodrift"
     }
   ],
   "scope": "Curated navigation snapshot of public default-branch work; not a benchmark or remote-state attestation.",
