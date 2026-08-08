@@ -1,9 +1,11 @@
-name: Portfolio map candidate
+name: Portfolio map CI
 
 on:
   push:
     branches:
+      - main
       - profile/reproducible-systems-map
+  pull_request:
 
 permissions:
   contents: read
@@ -22,7 +24,7 @@ env:
 
 jobs:
   render:
-    name: Render exact candidate
+    name: Render exact portfolio map
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     outputs:
@@ -41,18 +43,24 @@ jobs:
         with:
           python-version: "3.12.3"
 
-      - name: Assert the immutable source checkout
-        env:
-          EXPECTED_BASE: 3a9d4558c0c4bbda536cd731064d86694d756eb4
+      - name: Assert the exact event checkout
         shell: bash
         run: |
           set -euo pipefail
-          test "$GITHUB_EVENT_NAME" = "push"
-          test "$GITHUB_REF" = "refs/heads/profile/reproducible-systems-map"
+          case "$GITHUB_EVENT_NAME" in
+            push)
+              case "$GITHUB_REF" in
+                refs/heads/main|refs/heads/profile/reproducible-systems-map) ;;
+                *) exit 1 ;;
+              esac
+              ;;
+            pull_request)
+              [[ "$GITHUB_REF" =~ ^refs/pull/[0-9]+/merge$ ]]
+              ;;
+            *) exit 1 ;;
+          esac
           [[ "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]]
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
-          git cat-file -e "$EXPECTED_BASE^{commit}"
-          git merge-base --is-ancestor "$EXPECTED_BASE" HEAD
           test -z "$(git status --porcelain=v1 --untracked-files=all)"
           python - <<'PY'
           import platform
@@ -119,37 +127,31 @@ jobs:
           python tools/verify_portfolio_map_candidate.py \
             --bundle "$RUNNER_TEMP/portfolio-map-first"
 
-      - name: Run the complete tests against the candidate
+      - name: Verify committed assets and complete tests
         shell: bash
         run: |
           set -euo pipefail
-          install -m 0644 \
+          cmp -- \
             "$RUNNER_TEMP/portfolio-map-first/portfolio-systems-map.svg" \
             assets/portfolio-systems-map.svg
-          install -m 0644 \
+          cmp -- \
             "$RUNNER_TEMP/portfolio-map-first/portfolio-systems-map.manifest.json" \
             assets/portfolio-systems-map.manifest.json
           python tools/render_portfolio_map.py --check
           python -m unittest discover -s tests -p 'test_*.py' -v
 
-      - name: Enforce the generated-output boundary
+      - name: Enforce the read-only verification boundary
         shell: bash
         run: |
           set -euo pipefail
           git diff --check
-          actual="$(git diff --name-only -- . | LC_ALL=C sort)"
-          expected="$(printf '%s\n' \
-            assets/portfolio-systems-map.manifest.json \
-            assets/portfolio-systems-map.svg)"
-          test -z "$actual" || test "$actual" = "$expected"
-          test -z "$(git diff --cached --name-only -- .)"
-          test -z "$(git ls-files --others --exclude-standard)"
+          test -z "$(git status --porcelain=v1 --untracked-files=all)"
 
       - name: Upload the exact candidate bundle
         id: upload
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: portfolio-map-candidate-${{ github.sha }}
+          name: portfolio-map-${{ github.sha }}
           path: ${{ runner.temp }}/portfolio-map-first/
           if-no-files-found: error
           retention-days: 1
@@ -157,7 +159,7 @@ jobs:
           include-hidden-files: false
 
   verify-download:
-    name: Independently verify downloaded candidate
+    name: Verify downloaded portfolio map
     needs: render
     runs-on: ubuntu-24.04
     timeout-minutes: 10
@@ -178,16 +180,24 @@ jobs:
       - name: Assert exact head and artifact identity
         env:
           ARTIFACT_ID: ${{ needs.render.outputs.artifact_id }}
-          EXPECTED_BASE: 3a9d4558c0c4bbda536cd731064d86694d756eb4
         shell: bash
         run: |
           set -euo pipefail
-          test "$GITHUB_EVENT_NAME" = "push"
-          test "$GITHUB_REF" = "refs/heads/profile/reproducible-systems-map"
+          case "$GITHUB_EVENT_NAME" in
+            push)
+              case "$GITHUB_REF" in
+                refs/heads/main|refs/heads/profile/reproducible-systems-map) ;;
+                *) exit 1 ;;
+              esac
+              ;;
+            pull_request)
+              [[ "$GITHUB_REF" =~ ^refs/pull/[0-9]+/merge$ ]]
+              ;;
+            *) exit 1 ;;
+          esac
           [[ "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]]
           [[ "$ARTIFACT_ID" =~ ^[0-9]+$ ]]
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
-          git merge-base --is-ancestor "$EXPECTED_BASE" HEAD
           test -z "$(git status --porcelain=v1 --untracked-files=all)"
           python - <<'PY'
           import platform
