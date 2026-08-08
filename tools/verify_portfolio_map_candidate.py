@@ -19,6 +19,7 @@ ROOT: Final = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from tools import render_portfolio_map
 from tools.portfolio_map_contract import read_portfolio_map
 
 
@@ -406,6 +407,20 @@ def _verify_svg(visual: bytes, portfolio: object) -> None:
             _fail("svg_secret_like_data")
 
 
+def _verify_renderer_replay(
+    *,
+    visual: bytes,
+    manifest_payload: bytes,
+) -> None:
+    expected = render_portfolio_map.build_bundle(ROOT)
+    if set(expected) != {SVG_PATH, MANIFEST_PATH}:
+        _fail("renderer_bundle_inventory_mismatch")
+    if visual != expected[SVG_PATH]:
+        _fail("svg_renderer_replay_mismatch")
+    if manifest_payload != expected[MANIFEST_PATH]:
+        _fail("manifest_renderer_replay_mismatch")
+
+
 def verify(directory: Path) -> None:
     visual, manifest_payload = _bundle_payloads(directory)
     portfolio = read_portfolio_map(ROOT / SOURCE_PATH)
@@ -417,6 +432,10 @@ def verify(directory: Path) -> None:
     ):
         _fail("manifest_source_binding_mismatch")
     _verify_svg(visual, portfolio)
+    _verify_renderer_replay(
+        visual=visual,
+        manifest_payload=manifest_payload,
+    )
 
 
 def _parse_args(argv: Iterable[str] | None) -> argparse.Namespace:
