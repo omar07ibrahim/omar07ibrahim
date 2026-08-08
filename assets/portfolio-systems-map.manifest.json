@@ -10,10 +10,10 @@
     "project_count": 7,
     "projects": [
       {
-        "claim_boundary": "No benchmark or model-accuracy claim",
-        "commit_oid": "66c1ed8e0134707903f70eb9727e674cd72d3dbd",
+        "claim_boundary": "Authoring evidence only; no dataset, model, benchmark, or accuracy claim",
+        "commit_oid": "4fb56ee34b74f994d7dc3714443dfc8b25e45936",
         "default_branch": "main",
-        "evidence_surface": "Canonical capture and intervention records",
+        "evidence_surface": "12 Chromium checkpoints and a bound evidence manifest",
         "id": "impactdiff",
         "repository": "omar07ibrahim/impactdiff",
         "theme_ids": [
@@ -23,10 +23,10 @@
         ]
       },
       {
-        "claim_boundary": "No published throughput or RSS benchmark",
-        "commit_oid": "9989ae0f081012496cecd7b9641a1f17acced0bd",
+        "claim_boundary": "One synthetic run; no throughput, latency, RSS, or fairness score",
+        "commit_oid": "6a4974d01bc5e74307fb4dee192b0b8a752e6274",
         "default_branch": "main",
-        "evidence_surface": "End-to-end wire and relay tests",
+        "evidence_surface": "Loopback and fixed-seed 28-job saturation evidence",
         "id": "ssemaphore",
         "repository": "omar07ibrahim/ssemaphore",
         "theme_ids": [
@@ -36,23 +36,24 @@
         ]
       },
       {
-        "claim_boundary": "Process crashes, not power-loss durability",
-        "commit_oid": "b6491708082cb85772d79d1994c2f65a25f0992b",
+        "claim_boundary": "Synthetic slices; no end-to-end inference or serving speedup claim",
+        "commit_oid": "efaf38f10c1625d745eeb354c15ebe9b9b77611f",
         "default_branch": "main",
-        "evidence_surface": "Crash and recovery JSON evidence",
-        "id": "shardlift",
-        "repository": "omar07ibrahim/shardlift",
+        "evidence_surface": "Closed M1-M4 captures and raw M3-M4 evidence",
+        "id": "runnelmoe",
+        "repository": "omar07ibrahim/runnelmoe",
         "theme_ids": [
+          "bounded-inputs",
           "deterministic-replay",
           "independent-verification",
           "claim-boundaries"
         ]
       },
       {
-        "claim_boundary": "Static f32 graph slice; no performance claim",
-        "commit_oid": "b974c036a2e0c912515c8f7f52661edff06d7eb0",
+        "claim_boundary": "Narrow static f32 slice; no benchmark or full-transformer claim",
+        "commit_oid": "32c078a4c07f553abce9373aeb2ff8b601f23d8f",
         "default_branch": "main",
-        "evidence_surface": "Executable transcripts and five SVGs",
+        "evidence_surface": "Release CLI transcripts, GIF, and source-bound manifest",
         "id": "tensorkiln",
         "repository": "omar07ibrahim/tensorkiln",
         "theme_ids": [
@@ -63,23 +64,38 @@
         ]
       },
       {
-        "claim_boundary": "Incomplete streams remain ineligible or unknown",
-        "commit_oid": "a5d710259b05eaceafaeceabf3ad7dee145cb608",
+        "claim_boundary": "Neural experiments 002-006 yielded no valid metric or reusable checkpoint",
+        "commit_oid": "84389cda0bd7b715e166273d52640d16d84f5c4c",
         "default_branch": "main",
-        "evidence_surface": "Canonical fault-fold evidence",
-        "id": "kvcrucible",
-        "repository": "omar07ibrahim/kvcrucible",
+        "evidence_surface": "Experiments 000-001 reports and failed-run lineage",
+        "id": "falsewake",
+        "repository": "omar07ibrahim/falsewake",
         "theme_ids": [
           "bounded-inputs",
           "deterministic-replay",
+          "independent-verification",
           "claim-boundaries"
         ]
       },
       {
-        "claim_boundary": "No full model-load compatibility verdict",
-        "commit_oid": "348b0ab9ef0fa5f1609e65ed7cdff51309345d94",
+        "claim_boundary": "Metadata only; no checkpoint run, compression ratio, quality, or speed claim",
+        "commit_oid": "3086247ab991571d377fd9b2b0773cd40c6a2441",
         "default_branch": "main",
-        "evidence_surface": "Static LoRA inventory findings",
+        "evidence_surface": "M1 target-genome records and 11-file visual atlas",
+        "id": "stratafold",
+        "repository": "omar07ibrahim/stratafold",
+        "theme_ids": [
+          "bounded-inputs",
+          "deterministic-replay",
+          "independent-verification",
+          "claim-boundaries"
+        ]
+      },
+      {
+        "claim_boundary": "Structural evidence only; full load compatibility remains UNKNOWN",
+        "commit_oid": "ee72ce7a48edbfe3df9b463cc54583a2b8a6529b",
+        "default_branch": "main",
+        "evidence_surface": "Eight real CLI captures and an 8-of-17 rule matrix",
         "id": "peftlint",
         "repository": "omar07ibrahim/peftlint",
         "theme_ids": [
@@ -87,22 +103,9 @@
           "independent-verification",
           "claim-boundaries"
         ]
-      },
-      {
-        "claim_boundary": "Azerbaijani first lane; no semantic guarantee",
-        "commit_oid": "5e49fa7a7459c41d04dbb5a196551e59c156aba7",
-        "default_branch": "main",
-        "evidence_surface": "Replayable retrieval JSONL evidence",
-        "id": "orthodrift",
-        "repository": "omar07ibrahim/orthodrift",
-        "theme_ids": [
-          "deterministic-replay",
-          "independent-verification",
-          "claim-boundaries"
-        ]
       }
     ],
-    "semantic_sha256": "466e25ff35bed3eb4987e8196bb08c97e4ade09a5c928d1c30eebcd0502dd8cc",
+    "semantic_sha256": "9bdb27e85a464b6d0497f6d493664398657fe951724cd1dbd21ebd8b0dabc15c",
     "theme_count": 4,
     "theme_ids": [
       "bounded-inputs",
@@ -113,18 +116,18 @@
   },
   "outputs": [
     {
-      "bytes": 20728,
+      "bytes": 21608,
       "media_type": "image/svg+xml",
       "path": "assets/portfolio-systems-map.svg",
-      "sha256": "e869f1791b3ec0c49cd4a23983624a6437d06b9a8aaf7dcbc6a15cabb313ce5d"
+      "sha256": "e06c152eb9c3bfb663d573f8fb98d76ea1ec775da46e1573d72dda69e281201d"
     }
   ],
   "schema_version": 1,
   "sources": [
     {
-      "bytes": 5563,
+      "bytes": 5959,
       "path": "portfolio/projects.v1.json",
-      "sha256": "5fa310784514c9e39e79187c47fcbecf2b55da5101195755422c6de6375917c1"
+      "sha256": "4b41cf20197524c6cd3faff9425ab95abc8580deedcd0bb16aff76c46a000f99"
     },
     {
       "bytes": 12052,
