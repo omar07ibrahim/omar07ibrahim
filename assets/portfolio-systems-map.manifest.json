@@ -50,10 +50,10 @@
         ]
       },
       {
-        "claim_boundary": "Narrow static f32 slice; no benchmark or full-transformer claim",
-        "commit_oid": "32c078a4c07f553abce9373aeb2ff8b601f23d8f",
+        "claim_boundary": "Fixed f32 workloads; no benchmark, importer, or full-transformer claim",
+        "commit_oid": "4a87a4d75098112fca0bbd24e8c2778a109a80df",
         "default_branch": "main",
-        "evidence_surface": "Release CLI transcripts, GIF, and source-bound manifest",
+        "evidence_surface": "Three workloads, real CLI/GIF captures, and source-bound manifests",
         "id": "tensorkiln",
         "repository": "omar07ibrahim/tensorkiln",
         "theme_ids": [
@@ -105,7 +105,7 @@
         ]
       }
     ],
-    "semantic_sha256": "9bdb27e85a464b6d0497f6d493664398657fe951724cd1dbd21ebd8b0dabc15c",
+    "semantic_sha256": "522c60a051796981e065feffbe3bbaa44b30481f6a15a5f41c5a4db8533b42f5",
     "theme_count": 4,
     "theme_ids": [
       "bounded-inputs",
@@ -116,18 +116,18 @@
   },
   "outputs": [
     {
-      "bytes": 21608,
+      "bytes": 21626,
       "media_type": "image/svg+xml",
       "path": "assets/portfolio-systems-map.svg",
-      "sha256": "e06c152eb9c3bfb663d573f8fb98d76ea1ec775da46e1573d72dda69e281201d"
+      "sha256": "65c4dcd2501fbaa14b689a5557868611b9f46d2184fb79a9e5116c1590c5a87a"
     }
   ],
   "schema_version": 1,
   "sources": [
     {
-      "bytes": 5959,
+      "bytes": 5977,
       "path": "portfolio/projects.v1.json",
-      "sha256": "4b41cf20197524c6cd3faff9425ab95abc8580deedcd0bb16aff76c46a000f99"
+      "sha256": "5a5c94ee1030ac385e3abb9c634dcc9473f1e295fe5d5b508785800bc127f88e"
     },
     {
       "bytes": 12052,
