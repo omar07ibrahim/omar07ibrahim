@@ -63,10 +63,11 @@ host; neither is an end-to-end inference or serving-speed claim.
 A dependency-free static `f32` compiler/runtime with checked graphs, explicit
 rewrites, reverse-verified arena planning, independently reconstructed
 execution plans, guarded allocation-free sessions, and a separate reference
-interpreter. Real release-CLI transcripts and a three-frame workflow exercise
-two compiled-in workloads, including a six-step ReGLU slice with exact output
-agreement. The project makes no benchmark, general-model, or full-transformer
-claim.
+interpreter. Source-bound release-CLI and visual evidence now exercises three
+compiled-in workloads: the channel-affine slice proves
+`mul_broadcast_f32 -> add_broadcast_f32` with 6/6 raw output words independently
+matched, while the six-step ReGLU slice remains separately captured. The
+project makes no benchmark, general-model, importer, or full-transformer claim.
 
 ### [FalseWake](https://github.com/omar07ibrahim/falsewake) · Python / PyTorch · Streaming keyword spotting
 

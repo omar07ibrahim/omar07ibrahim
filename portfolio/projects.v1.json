@@ -57,11 +57,11 @@
       "url": "https://github.com/omar07ibrahim/runnelmoe"
     },
     {
-      "claim_boundary": "Narrow static f32 slice; no benchmark or full-transformer claim",
-      "commit_oid": "32c078a4c07f553abce9373aeb2ff8b601f23d8f",
+      "claim_boundary": "Fixed f32 workloads; no benchmark, importer, or full-transformer claim",
+      "commit_oid": "4a87a4d75098112fca0bbd24e8c2778a109a80df",
       "default_branch": "main",
       "domain": "Tensor compiler and runtime",
-      "evidence_surface": "Release CLI transcripts, GIF, and source-bound manifest",
+      "evidence_surface": "Three workloads, real CLI/GIF captures, and source-bound manifests",
       "focus": "Verified static f32 graph execution",
       "id": "tensorkiln",
       "language": "C++20",
