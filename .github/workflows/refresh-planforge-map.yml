@@ -25,7 +25,7 @@ jobs:
     if: >-
       github.repository == 'omar07ibrahim/omar07ibrahim' &&
       github.actor == 'omar07ibrahim' &&
-      github.event.head_commit.message == 'Refresh PlanForge portfolio evidence'
+      github.event.head_commit.message == 'Repair guarded portfolio refresh'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
 
@@ -50,7 +50,7 @@ jobs:
           test "$GITHUB_REPOSITORY" = omar07ibrahim/omar07ibrahim
           test "$GITHUB_ACTOR" = omar07ibrahim
           test "$GITHUB_REF" = refs/heads/portfolio/showcase-planforge
-          test "$(git log -1 --pretty=%s)" = "Refresh PlanForge portfolio evidence"
+          test "$(git log -1 --pretty=%s)" = "Repair guarded portfolio refresh"
           [[ "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]]
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
           test -z "$(git status --porcelain=v1 --untracked-files=all)"
@@ -129,10 +129,23 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          expected="$(printf '%s
-'             assets/portfolio-systems-map.manifest.json             assets/portfolio-systems-map.svg             docs/portfolio-map-contract.md             tests/test_portfolio_map_contract.py             tests/test_portfolio_map_visual.py)"
-          actual="$(git diff --name-only | LC_ALL=C sort)"
-          test "$actual" = "$expected"
+          python - <<'PY'
+          import subprocess
+
+          expected = sorted({
+              "assets/portfolio-systems-map.manifest.json",
+              "assets/portfolio-systems-map.svg",
+              "docs/portfolio-map-contract.md",
+              "tests/test_portfolio_map_contract.py",
+              "tests/test_portfolio_map_visual.py",
+          })
+          actual = sorted(subprocess.check_output(
+              ["git", "diff", "--name-only"],
+              text=True,
+          ).splitlines())
+          if actual != expected:
+              raise SystemExit(f"unexpected generated inventory: {actual}")
+          PY
           git config user.name "Omar Ibrahim"
           git config user.email "31526072+omar07ibrahim@users.noreply.github.com"
           export GIT_AUTHOR_NAME="Omar Ibrahim"
@@ -140,7 +153,7 @@ jobs:
           export GIT_COMMITTER_NAME="Omar Ibrahim"
           export GIT_COMMITTER_EMAIL="31526072+omar07ibrahim@users.noreply.github.com"
           git add --             assets/portfolio-systems-map.manifest.json             assets/portfolio-systems-map.svg             docs/portfolio-map-contract.md             tests/test_portfolio_map_contract.py             tests/test_portfolio_map_visual.py
-          test "$(git diff --cached --name-only | LC_ALL=C sort)" = "$expected"
+          test $(git diff --cached --name-only | wc -l) -eq 5
           test -z "$(git diff --name-only)"
           git commit -m "Adopt generated PlanForge portfolio map"
           test -z "$(git status --porcelain=v1 --untracked-files=all)"
