@@ -56,7 +56,7 @@ EXPECTED_PROJECT_REFS: Final = (
     (
         "tensorkiln",
         "omar07ibrahim/tensorkiln",
-        "32c078a4c07f553abce9373aeb2ff8b601f23d8f",
+        "4a87a4d75098112fca0bbd24e8c2778a109a80df",
     ),
     (
         "falsewake",
