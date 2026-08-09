@@ -29,7 +29,7 @@ reviewed geometry.
 The reviewed semantic SHA-256 of version 1 is:
 
 ```text
-9bdb27e85a464b6d0497f6d493664398657fe951724cd1dbd21ebd8b0dabc15c
+60a8d25a43e7ba8be2f73d24a34a2b6b932b898a59b6f37d9ba07e9b85c3545c
 ```
 
 The strict standard-library decoder rejects duplicate, missing, and unknown

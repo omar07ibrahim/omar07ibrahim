@@ -23,10 +23,10 @@ MANIFEST = ROOT / render_portfolio_map.MANIFEST_PATH
 SVG_NAMESPACE = "http://www.w3.org/2000/svg"
 FROZEN_OUTPUT_SHA256 = {
     render_portfolio_map.SVG_PATH: (
-        "65c4dcd2501fbaa14b689a5557868611b9f46d2184fb79a9e5116c1590c5a87a"
+        "0fb42ee20ae7b0dbb01ca16c632f1774a0432af75b6931a37647b0e9055b02b9"
     ),
     render_portfolio_map.MANIFEST_PATH: (
-        "117e2573ac716973e927ac5f0ba48a3346e48f7d21df847cf78763725379e55c"
+        "b16d3c5af02dfc5b535d5bff8ab3fe9e96082d0f359ae31d3d04cd1042594732"
     ),
 }
 

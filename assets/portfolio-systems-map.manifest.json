@@ -92,20 +92,21 @@
         ]
       },
       {
-        "claim_boundary": "Structural evidence only; full load compatibility remains UNKNOWN",
-        "commit_oid": "ee72ce7a48edbfe3df9b463cc54583a2b8a6529b",
+        "claim_boundary": "Nine serial tasks max; caller estimates remain assumptions",
+        "commit_oid": "423770379df67bb6862d180a6813f953ff30fbfb",
         "default_branch": "main",
-        "evidence_surface": "Eight real CLI captures and an 8-of-17 rule matrix",
-        "id": "peftlint",
-        "repository": "omar07ibrahim/peftlint",
+        "evidence_surface": "Plan receipts plus real CLI, Chromium, SVG, and GIF evidence",
+        "id": "planforge",
+        "repository": "omar07ibrahim/Todo",
         "theme_ids": [
           "bounded-inputs",
+          "deterministic-replay",
           "independent-verification",
           "claim-boundaries"
         ]
       }
     ],
-    "semantic_sha256": "522c60a051796981e065feffbe3bbaa44b30481f6a15a5f41c5a4db8533b42f5",
+    "semantic_sha256": "60a8d25a43e7ba8be2f73d24a34a2b6b932b898a59b6f37d9ba07e9b85c3545c",
     "theme_count": 4,
     "theme_ids": [
       "bounded-inputs",
@@ -116,18 +117,18 @@
   },
   "outputs": [
     {
-      "bytes": 21626,
+      "bytes": 21833,
       "media_type": "image/svg+xml",
       "path": "assets/portfolio-systems-map.svg",
-      "sha256": "65c4dcd2501fbaa14b689a5557868611b9f46d2184fb79a9e5116c1590c5a87a"
+      "sha256": "0fb42ee20ae7b0dbb01ca16c632f1774a0432af75b6931a37647b0e9055b02b9"
     }
   ],
   "schema_version": 1,
   "sources": [
     {
-      "bytes": 5977,
+      "bytes": 6020,
       "path": "portfolio/projects.v1.json",
-      "sha256": "5a5c94ee1030ac385e3abb9c634dcc9473f1e295fe5d5b508785800bc127f88e"
+      "sha256": "f3a571dc595e19802293070aef94d87fccd7b81ac26bc3702d80892ce492c4ac"
     },
     {
       "bytes": 12052,
