@@ -98,13 +98,33 @@ load against a base model.
 
 ## Additional maintained systems
 
-- [Netveil](https://github.com/omar07ibrahim/netveil) · Python · Privacy and supply-chain security — offline pseudonymized audit receipts, guarded wheel execution, a published v0.3.0 evidence bundle, and explicit disclosure limits.
-- [K2DO](https://github.com/omar07ibrahim/k2do) · Python · Agent orchestration — a provenance-explicit nanobot derivative with routed DeepThink, real MCP subprocess fault labs, bounded cancellation, and three source-bound visual evidence suites.
-- [MeasureTrace](https://github.com/omar07ibrahim/measuretrace) · Python · Exact computing — rational m/km/mi conversion, independently recomputed receipts, reproducible packages, and real responsive browser captures.
-- [ShardLift](https://github.com/omar07ibrahim/shardlift) · Python / PyTorch · Distributed training — crash-consistent checkpoints, deterministic recovery, and auditable real-SIGKILL evidence.
-- [KVCrucible](https://github.com/omar07ibrahim/kvcrucible) · Rust / Python · LLM inference reliability — an offline conformance lab for unreliable KV-cache event streams, explicit uncertainty, replayable witnesses, and fault-injection evidence.
+- [Netveil](https://github.com/omar07ibrahim/netveil) · Python · Privacy and
+  supply-chain security — offline pseudonymized audit receipts, guarded wheel
+  execution, a published v0.3.0 evidence bundle, and explicit disclosure limits.
+- [K2DO](https://github.com/omar07ibrahim/k2do) · Python · Agent orchestration —
+  a provenance-explicit nanobot derivative with routed DeepThink, real MCP
+  subprocess fault labs, bounded cancellation, and three source-bound visual
+  evidence suites.
+- [MeasureTrace](https://github.com/omar07ibrahim/measuretrace) · Python · Exact
+  computing — rational m/km/mi conversion, independently recomputed receipts,
+  reproducible packages, and real responsive browser captures.
+- [ShardLift](https://github.com/omar07ibrahim/shardlift) · Python / PyTorch ·
+  Distributed training — crash-consistent checkpoints, deterministic recovery,
+  and auditable real-SIGKILL evidence.
+- [KVCrucible](https://github.com/omar07ibrahim/kvcrucible) · Rust / Python · LLM
+  inference reliability — an offline conformance lab for unreliable KV-cache
+  event streams, explicit uncertainty, replayable witnesses, and fault-injection
+  evidence.
 
-Also maintained: [RecallLedger / note](https://github.com/omar07ibrahim/note) · [UnitSentinel / units](https://github.com/omar07ibrahim/units) · [Casefold / case](https://github.com/omar07ibrahim/case) · [PasswordGenerator](https://github.com/omar07ibrahim/PasswordGenerator) · [GWorker](https://github.com/omar07ibrahim/GWorker) · [WitnessGap](https://github.com/omar07ibrahim/witnessgap) · [A1220](https://github.com/omar07ibrahim/A1220-lab1-omar07ibrahim)## Engineering approach
+Also maintained: [RecallLedger / note](https://github.com/omar07ibrahim/note) ·
+[UnitSentinel / units](https://github.com/omar07ibrahim/units) ·
+[Casefold / case](https://github.com/omar07ibrahim/case) ·
+[PasswordGenerator](https://github.com/omar07ibrahim/PasswordGenerator) ·
+[GWorker](https://github.com/omar07ibrahim/GWorker) ·
+[WitnessGap](https://github.com/omar07ibrahim/witnessgap) ·
+[A1220](https://github.com/omar07ibrahim/A1220-lab1-omar07ibrahim)
+
+## Engineering approach
 
 - State the trust boundary and non-goal before making a claim.
 - Bound bytes, shapes, work, queues, retained state, and diagnostics.
