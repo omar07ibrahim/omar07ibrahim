@@ -88,17 +88,20 @@ and an 11-file visual atlas. No full checkpoint was downloaded or run, so M1
 makes no compression-ratio, quality, throughput, active-compute, or
 state-of-the-art claim.
 
-### [PEFTLint](https://github.com/omar07ibrahim/peftlint) · Python · Model artifact tooling
+### [PlanForge](https://github.com/omar07ibrahim/Todo) · Python · Classical AI / operations research
 
-A fail-closed local preflight for PEFT LoRA checkpoints that inventories
-components, parses pinned configuration and safetensors headers, and emits
-deterministic structural evidence without importing model code or reading
-tensor payload bytes. Eight real CLI cases expose the current 8-of-17 rule
-slice. Even a clean run remains `UNKNOWN`; it is not proof that an adapter can
-load against a base model.
+A dependency-free exact scheduler for dependency-aware single-day planning with
+a separate optimality verifier, canonical SHA-256 receipts, safe CLI bundles,
+and a loopback-only dashboard. Public evidence includes 32 tests across Python
+3.11-3.14 plus real CLI, Chromium desktop/mobile, SVG, and GIF captures bound
+by a manifest. Exact mode is capped at nine serial tasks; it does not model
+multi-user calendars, and caller estimates remain assumptions.
 
 ## Additional maintained systems
 
+- [PEFTLint](https://github.com/omar07ibrahim/peftlint) · Python · Model artifact
+  tooling — fail-closed LoRA checkpoint admission, eight real CLI cases, and an
+  explicit UNKNOWN compatibility boundary.
 - [Netveil](https://github.com/omar07ibrahim/netveil) · Python · Privacy and
   supply-chain security — offline pseudonymized audit receipts, guarded wheel
   execution, a published v0.3.0 evidence bundle, and explicit disclosure limits.

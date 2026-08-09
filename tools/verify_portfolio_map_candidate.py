@@ -69,9 +69,9 @@ EXPECTED_PROJECT_REFS: Final = (
         "3086247ab991571d377fd9b2b0773cd40c6a2441",
     ),
     (
-        "peftlint",
-        "omar07ibrahim/peftlint",
-        "ee72ce7a48edbfe3df9b463cc54583a2b8a6529b",
+        "planforge",
+        "omar07ibrahim/Todo",
+        "423770379df67bb6862d180a6813f953ff30fbfb",
     ),
 )
 SECRET_PATTERNS: Final = (

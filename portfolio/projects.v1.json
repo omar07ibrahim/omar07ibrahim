@@ -114,22 +114,23 @@
       "url": "https://github.com/omar07ibrahim/stratafold"
     },
     {
-      "claim_boundary": "Structural evidence only; full load compatibility remains UNKNOWN",
-      "commit_oid": "ee72ce7a48edbfe3df9b463cc54583a2b8a6529b",
+      "claim_boundary": "Nine serial tasks max; caller estimates remain assumptions",
+      "commit_oid": "423770379df67bb6862d180a6813f953ff30fbfb",
       "default_branch": "main",
-      "domain": "Model artifact tooling",
-      "evidence_surface": "Eight real CLI captures and an 8-of-17 rule matrix",
-      "focus": "Fail-closed LoRA checkpoint admission",
-      "id": "peftlint",
+      "domain": "Classical AI / operations research",
+      "evidence_surface": "Plan receipts plus real CLI, Chromium, SVG, and GIF evidence",
+      "focus": "Independently verified exact scheduling",
+      "id": "planforge",
       "language": "Python",
-      "name": "PEFTLint",
-      "repository": "omar07ibrahim/peftlint",
+      "name": "PlanForge",
+      "repository": "omar07ibrahim/Todo",
       "themes": [
         "bounded-inputs",
+        "deterministic-replay",
         "independent-verification",
         "claim-boundaries"
       ],
-      "url": "https://github.com/omar07ibrahim/peftlint"
+      "url": "https://github.com/omar07ibrahim/Todo"
     }
   ],
   "scope": "Curated navigation snapshot of public default-branch work; not a benchmark or remote-state attestation.",
