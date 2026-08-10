@@ -108,6 +108,15 @@ multi-user calendars, and caller estimates remain assumptions.
   [13-file source-bound evidence bundle](https://github.com/omar07ibrahim/causalfence/tree/ef6e8d076dd467a649870ad4cd6163ebb1b6bfc7/docs/evidence);
   the synthetic trace does not certify a database, establish production
   correctness, measure performance, or prove global witness minimality.
+- [FeatureSeal](https://github.com/omar07ibrahim/featureseal) · Python ·
+  MLOps / temporal data engineering — released
+  [v0.1.0](https://github.com/omar07ibrahim/featureseal/releases/tag/v0.1.0)
+  with deterministic event-time and availability-time joins, six primary
+  leakage reasons, canonical hash-chain receipts, independent SQLite replay,
+  73 tests across Python 3.11-3.14, and a
+  [13-file source-bound evidence bundle](https://github.com/omar07ibrahim/featureseal/tree/7897be36eee63403a134ded1933cc777d2e152d9/docs/evidence);
+  the synthetic fixture does not certify a feature store, establish production
+  leakage rates, validate upstream truth, or measure model quality.
 - [IntentGate](https://github.com/omar07ibrahim/intentgate) · Python ·
   Agentic AI safety — released
   [v0.1.0](https://github.com/omar07ibrahim/intentgate/releases/tag/v0.1.0)
