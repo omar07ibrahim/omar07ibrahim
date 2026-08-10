@@ -1,6 +1,13 @@
 name: Portfolio map CI
 
 on:
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: Render a review-only candidate without comparing adopted assets
+        required: true
+        default: false
+        type: boolean
   push:
     branches:
       - main
@@ -56,6 +63,9 @@ jobs:
               ;;
             pull_request)
               [[ "$GITHUB_REF" =~ ^refs/pull/[0-9]+/merge$ ]]
+              ;;
+            workflow_dispatch)
+              [[ "$GITHUB_REF" =~ ^refs/heads/[A-Za-z0-9._/-]+$ ]]
               ;;
             *) exit 1 ;;
           esac
@@ -128,6 +138,7 @@ jobs:
             --bundle "$RUNNER_TEMP/portfolio-map-first"
 
       - name: Verify committed assets and complete tests
+        if: ${{ !inputs.refresh }}
         shell: bash
         run: |
           set -euo pipefail
@@ -140,6 +151,22 @@ jobs:
           python tools/render_portfolio_map.py --check
           python -m unittest discover -s tests -p 'test_*.py' -v
 
+      - name: Emit the bounded review candidate
+        if: ${{ inputs.refresh }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for name in \
+            portfolio-systems-map.manifest.json \
+            portfolio-systems-map.svg
+          do
+            path="$RUNNER_TEMP/portfolio-map-first/$name"
+            test -f "$path"
+            test "$(wc -c < "$path")" -le 262144
+            printf 'PORTFOLIO_MAP_BEGIN %s\n' "$name"
+            base64 --wrap=0 "$path"
+            printf '\nPORTFOLIO_MAP_END %s\n' "$name"
+          done
       - name: Enforce the read-only verification boundary
         shell: bash
         run: |
@@ -151,7 +178,7 @@ jobs:
         id: upload
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: portfolio-map-${{ github.sha }}
+          name: portfolio-map-${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
           path: ${{ runner.temp }}/portfolio-map-first/
           if-no-files-found: error
           retention-days: 1
@@ -192,6 +219,9 @@ jobs:
               ;;
             pull_request)
               [[ "$GITHUB_REF" =~ ^refs/pull/[0-9]+/merge$ ]]
+              ;;
+            workflow_dispatch)
+              [[ "$GITHUB_REF" =~ ^refs/heads/[A-Za-z0-9._/-]+$ ]]
               ;;
             *) exit 1 ;;
           esac
