@@ -112,6 +112,15 @@ multi-user calendars, and caller estimates remain assumptions.
   [13-file source-bound visual bundle](https://github.com/omar07ibrahim/orthodrift/tree/44e7fdc2e208db445569f31f2808e58340b9104b/docs/evidence);
   the synthetic Şəki fixture is not a broad benchmark, dense-retrieval result,
   or native-language review.
+- [SensorProof](https://github.com/omar07ibrahim/sensorproof) · Python ·
+  Fault-aware robotics / sensor fusion — released
+  [v0.1.0](https://github.com/omar07ibrahim/sensorproof/releases/tag/v0.1.0)
+  with deterministic fixed-point fusion, independently replayable decision
+  certificates, 38/38 abrupt fault observations rejected or quarantined, a
+  98.18% RMSE reduction against the identical-stream ungated baseline, and a
+  [13-file source-bound evidence bundle](https://github.com/omar07ibrahim/sensorproof/tree/4e6fda8129604f00d722c653398741e93c8a040c/docs/evidence);
+  the synthetic step-fault scenario is not a slow-ramp, correlated-fault,
+  real-vehicle, production-covariance, or safety-certification claim.
 - [PEFTLint](https://github.com/omar07ibrahim/peftlint) · Python · Model artifact
   tooling — fail-closed LoRA checkpoint admission, eight real CLI cases, and an
   explicit UNKNOWN compatibility boundary.
