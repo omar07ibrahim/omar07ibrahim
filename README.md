@@ -100,6 +100,15 @@ multi-user calendars, and caller estimates remain assumptions.
 
 ## Additional maintained systems
 
+- [IntentGate](https://github.com/omar07ibrahim/intentgate) · Python ·
+  Agentic AI safety — released
+  [v0.1.0](https://github.com/omar07ibrahim/intentgate/releases/tag/v0.1.0)
+  with deterministic proposal admission, human manager and privacy approvals,
+  tenant/TTL/replay/one-effect controls, an independently verified hash ledger,
+  and a
+  [13-file source-bound evidence bundle](https://github.com/omar07ibrahim/intentgate/tree/eaf5265ac9bb23fc564157d2bf3c4cfa7d390216/docs/evidence);
+  the synthetic HR fixture is not a model-quality result, regulatory-compliance
+  claim, production security certification, or third-party integration.
 - [StrataFold](https://github.com/omar07ibrahim/stratafold) · Python ·
   MoE compression research — a pinned official-metadata target genome, raw M1
   records, a deliberate rejection path, and an 11-file visual atlas; no full
