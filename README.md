@@ -100,6 +100,14 @@ multi-user calendars, and caller estimates remain assumptions.
 
 ## Additional maintained systems
 
+- [CausalFence](https://github.com/omar07ibrahim/causalfence) · Python ·
+  Distributed-systems consistency — released
+  [v0.1.0](https://github.com/omar07ibrahim/causalfence/releases/tag/v0.1.0)
+  with five causal/session guarantees, deterministic bounded witnesses, a
+  hash-chained receipt, independent Floyd–Warshall replay, 60 tests, and a
+  [13-file source-bound evidence bundle](https://github.com/omar07ibrahim/causalfence/tree/ef6e8d076dd467a649870ad4cd6163ebb1b6bfc7/docs/evidence);
+  the synthetic trace does not certify a database, establish production
+  correctness, measure performance, or prove global witness minimality.
 - [IntentGate](https://github.com/omar07ibrahim/intentgate) · Python ·
   Agentic AI safety — released
   [v0.1.0](https://github.com/omar07ibrahim/intentgate/releases/tag/v0.1.0)
