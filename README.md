@@ -136,6 +136,15 @@ multi-user calendars, and caller estimates remain assumptions.
   [13-file source-bound evidence bundle](https://github.com/omar07ibrahim/intentgate/tree/eaf5265ac9bb23fc564157d2bf3c4cfa7d390216/docs/evidence);
   the synthetic HR fixture is not a model-quality result, regulatory-compliance
   claim, production security certification, or third-party integration.
+- [RecallLedger](https://github.com/omar07ibrahim/note) · Python · AI memory
+  and storage — released
+  [v0.1.0](https://github.com/omar07ibrahim/note/releases/tag/v0.1.0)
+  with a tenant-isolated canonical event ledger, dependency-free installed
+  CLI, deterministic lexical oracle, fail-closed FTS5 candidate audit, 100%
+  branch coverage across Python 3.11/3.12, and a
+  [real six-file installed-wheel evidence bundle](https://github.com/omar07ibrahim/note/tree/v0.1.0/docs/visuals);
+  this Linux/POSIX pre-alpha trusts caller-supplied tenant context and makes
+  no authentication, persistent-index, semantic-model, or performance claim.
 - [StrataFold](https://github.com/omar07ibrahim/stratafold) · Python ·
   MoE compression research — a pinned official-metadata target genome, raw M1
   records, a deliberate rejection path, and an 11-file visual atlas; no full
@@ -178,8 +187,7 @@ multi-user calendars, and caller estimates remain assumptions.
   event streams, explicit uncertainty, replayable witnesses, and fault-injection
   evidence.
 
-Also maintained: [RecallLedger / note](https://github.com/omar07ibrahim/note) ·
-[UnitSentinel / units](https://github.com/omar07ibrahim/units) ·
+Also maintained: [UnitSentinel / units](https://github.com/omar07ibrahim/units) ·
 [Casefold / case](https://github.com/omar07ibrahim/case) ·
 [PasswordGenerator](https://github.com/omar07ibrahim/PasswordGenerator) ·
 [GWorker](https://github.com/omar07ibrahim/GWorker) ·
