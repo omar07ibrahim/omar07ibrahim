@@ -117,6 +117,16 @@ multi-user calendars, and caller estimates remain assumptions.
   [13-file source-bound evidence bundle](https://github.com/omar07ibrahim/featureseal/tree/7897be36eee63403a134ded1933cc777d2e152d9/docs/evidence);
   the synthetic fixture does not certify a feature store, establish production
   leakage rates, validate upstream truth, or measure model quality.
+- [QuorumGrad](https://github.com/omar07ibrahim/quorumgrad) · Python ·
+  Adversarial ML / federated learning — released
+  [v0.1.0](https://github.com/omar07ibrahim/quorumgrad/releases/tag/v0.1.0)
+  with fixed-point coordinate-wise trimmed aggregation, explicit rank
+  witnesses, canonical hash-chain receipts, independent O(n²) pairwise-rank
+  replay, 88 tests across Python 3.11-3.14, and a
+  [13-file source-bound evidence bundle](https://github.com/omar07ibrahim/quorumgrad/tree/1ad8a328762d1414a1b9b1b15035d2e238944673/docs/evidence);
+  the synthetic round does not identify attackers, guarantee convergence,
+  preserve privacy, certify a federated-learning deployment, or establish
+  universal poisoning resistance.
 - [IntentGate](https://github.com/omar07ibrahim/intentgate) · Python ·
   Agentic AI safety — released
   [v0.1.0](https://github.com/omar07ibrahim/intentgate/releases/tag/v0.1.0)
