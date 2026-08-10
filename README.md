@@ -42,9 +42,11 @@ benchmark result, or accuracy claim.
 
 ### [SSemaphore](https://github.com/omar07ibrahim/ssemaphore) · Go · LLM serving infrastructure
 
-A Linux loopback gateway for bounded multi-tenant Chat Completions traffic,
-weighted-deficit admission, validated buffered/SSE relay, cancellation, and
-signal-owned shutdown. Public evidence covers one controlled loopback workflow
+Released as
+[v0.1.0](https://github.com/omar07ibrahim/ssemaphore/releases/tag/v0.1.0),
+this Linux loopback gateway provides bounded multi-tenant Chat Completions
+traffic, weighted-deficit admission, validated buffered/SSE relay,
+cancellation, and signal-owned shutdown. Public evidence covers one controlled loopback workflow
 and one fixed-seed 28-job saturation run whose dispatches match an independent
 bounded oracle. It does not report throughput, latency, RSS, a fairness score,
 or a service-share benchmark.
@@ -166,9 +168,38 @@ multi-user calendars, and caller estimates remain assumptions.
   [13-file source-bound evidence bundle](https://github.com/omar07ibrahim/sensorproof/tree/4e6fda8129604f00d722c653398741e93c8a040c/docs/evidence);
   the synthetic step-fault scenario is not a slow-ramp, correlated-fault,
   real-vehicle, production-covariance, or safety-certification claim.
+- [COWBOT](https://github.com/omar07ibrahim/cowbot) · Python · ML systems
+  observability — released
+  [v0.1.0](https://github.com/omar07ibrahim/cowbot/releases/tag/v0.1.0)
+  with graph-informed replay, a retained counterexample, source-bound incident
+  visuals, and a frozen-unrun 128-pair holdout protocol; no holdout result,
+  causal proof, throughput claim, or production validation is presented.
+- [UrbanLens](https://github.com/omar07ibrahim/city) · Python · Geospatial
+  systems — released
+  [v0.3.0](https://github.com/omar07ibrahim/city/releases/tag/v0.3.0)
+  with a deterministic spherical k-d tree, full-scan oracle verification,
+  canonical query receipts, seven source-derived visuals, and an attributed
+  historical dataset; it is not routing, current geopolitics, or survey-grade
+  geodesy.
+- [Casefold Observatory](https://github.com/omar07ibrahim/case) · Python ·
+  Unicode security — released
+  [v0.5.0](https://github.com/omar07ibrahim/case/releases/tag/v0.5.0)
+  with bounded collision graphs, canonical replay receipts, hardened CLI and
+  offline HTML publication, real CLI/Chromium evidence, and no claim of
+  authentication, confusable detection, or universal policy correctness.
+- [Auditable Receipt Extractor](https://github.com/omar07ibrahim/A1220-lab1-omar07ibrahim) ·
+  Python · Multimodal document AI — released
+  [v0.4.0](https://github.com/omar07ibrahim/A1220-lab1-omar07ibrahim/releases/tag/v0.4.0)
+  with pre-upload batch validation, typed provider output, exact offline
+  replay, content-addressed provenance, and a provider-free synthetic
+  evaluator; public evidence is not live-model accuracy or proof that a model
+  ran.
 - [PEFTLint](https://github.com/omar07ibrahim/peftlint) · Python · Model artifact
-  tooling — fail-closed LoRA checkpoint admission, eight real CLI cases, and an
-  explicit UNKNOWN compatibility boundary.
+  tooling — pre-released
+  [v0.1.0.dev0](https://github.com/omar07ibrahim/peftlint/releases/tag/v0.1.0.dev0)
+  with fail-closed LoRA checkpoint admission, eight real CLI cases, and an
+  explicit UNKNOWN compatibility boundary: only 8 of 17 load rules are
+  implemented, so COMPATIBLE remains unreachable.
 - [Netveil](https://github.com/omar07ibrahim/netveil) · Python · Privacy and
   supply-chain security — offline pseudonymized audit receipts, guarded wheel
   execution, a published v0.3.0 evidence bundle, and explicit disclosure limits.
@@ -188,11 +219,9 @@ multi-user calendars, and caller estimates remain assumptions.
   evidence.
 
 Also maintained: [UnitSentinel / units](https://github.com/omar07ibrahim/units) ·
-[Casefold / case](https://github.com/omar07ibrahim/case) ·
 [PasswordGenerator](https://github.com/omar07ibrahim/PasswordGenerator) ·
 [GWorker](https://github.com/omar07ibrahim/GWorker) ·
-[WitnessGap](https://github.com/omar07ibrahim/witnessgap) ·
-[A1220](https://github.com/omar07ibrahim/A1220-lab1-omar07ibrahim)
+[WitnessGap](https://github.com/omar07ibrahim/witnessgap)
 
 ## Engineering approach
 
