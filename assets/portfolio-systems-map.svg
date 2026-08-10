@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1430" viewBox="0 0 1800 1430" role="img" aria-labelledby="map-title map-desc" data-format="omar.portfolio_map_manifest.v1" data-semantic-sha256="84b732e27f3f82ce0035a27b7393678235449eb57cbda42d603115b95c3f80eb">
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1430" viewBox="0 0 1800 1430" role="img" aria-labelledby="map-title map-desc" data-format="omar.portfolio_map_manifest.v1" data-semantic-sha256="a4189b0892dd0ddfae07506547b4cf4f933172fa4fb04f32024978732911dbf7">
   <title id="map-title">Omar Ibrahim — AI systems portfolio map</title>
   <desc id="map-desc">A source-derived navigation map of seven public AI systems projects, their evidence surfaces, recurring engineering themes, pinned default-branch refs, and explicit claim boundaries.</desc>
   <style>
@@ -34,7 +34,7 @@
   <text class="title" x="76" y="84" textLength="792" lengthAdjust="spacingAndGlyphs">Omar Ibrahim — AI systems portfolio map</text>
   <text class="subtitle" x="76" y="122" textLength="514" lengthAdjust="spacingAndGlyphs">Seven systems, four recurring engineering constraints</text>
   <text class="digest-label" x="76" y="153">CONTRACT SEMANTIC SHA-256</text>
-  <text class="digest" x="290" y="153">84b732e27f3f82ce0035a27b7393678235449eb57cbda42d603115b95c3f80eb</text>
+  <text class="digest" x="290" y="153">a4189b0892dd0ddfae07506547b4cf4f933172fa4fb04f32024978732911dbf7</text>
   <g data-metric="projects">
     <rect x="1410" y="58" width="140" height="92" rx="18" fill="#164e63"/>
     <text class="metric-label" x="1480" y="86">PROJECTS</text>
@@ -76,7 +76,7 @@
 </g>
   <text class="section" x="40" y="414">Selected public systems</text>
   <text class="section-note" x="430" y="414">Evidence surface + explicit boundary + pinned default-branch snapshot</text>
-  <g data-project-id="impactdiff" data-repository="omar07ibrahim/impactdiff" data-default-branch="main" data-commit-oid="4fb56ee34b74f994d7dc3714443dfc8b25e45936" data-theme-ids="bounded-inputs,deterministic-replay,claim-boundaries">
+  <g data-project-id="impactdiff" data-repository="omar07ibrahim/impactdiff" data-default-branch="main" data-commit-oid="52bf343f34c52600e837c00d928a27e82bfe53c9" data-theme-ids="bounded-inputs,deterministic-replay,claim-boundaries">
 <rect x="40" y="420" width="840" height="188" rx="18" class="project-card"/>
 <rect x="40" y="420" width="8" height="188" rx="4" fill="#0e7490"/>
 <text x="70" y="459" class="project-name" textLength="130" lengthAdjust="spacingAndGlyphs">ImpactDiff</text>
@@ -87,7 +87,7 @@
 <text x="218" y="544" class="row-value" textLength="412" lengthAdjust="spacingAndGlyphs">12 Chromium checkpoints and a bound evidence manifest</text>
 <text x="70" y="572" class="row-label">BOUNDARY</text>
 <text x="194" y="572" class="boundary" textLength="565" lengthAdjust="spacingAndGlyphs">Authoring evidence only; no dataset, model, benchmark, or accuracy claim</text>
-<text x="70" y="597" class="ref" textLength="126" lengthAdjust="spacingAndGlyphs">main · 4fb56ee34b74</text>
+<text x="70" y="597" class="ref" textLength="124" lengthAdjust="spacingAndGlyphs">main · 52bf343f34c5</text>
 <rect x="350" y="579" width="76" height="26" rx="13" fill="#cffafe"/>
 <circle cx="363" cy="592" r="4" fill="#0e7490"/>
 <text x="373" y="597" class="chip">bounded</text>
@@ -98,7 +98,7 @@
 <circle cx="527" cy="592" r="4" fill="#b45309"/>
 <text x="537" y="597" class="chip">bounded claim</text>
 </g>
-<g data-project-id="ssemaphore" data-repository="omar07ibrahim/ssemaphore" data-default-branch="main" data-commit-oid="6a4974d01bc5e74307fb4dee192b0b8a752e6274" data-theme-ids="bounded-inputs,independent-verification,claim-boundaries">
+<g data-project-id="ssemaphore" data-repository="omar07ibrahim/ssemaphore" data-default-branch="main" data-commit-oid="f08757fc31d419a52ad7c2ae178c63f4b9fa1307" data-theme-ids="bounded-inputs,independent-verification,claim-boundaries">
 <rect x="920" y="420" width="840" height="188" rx="18" class="project-card"/>
 <rect x="920" y="420" width="8" height="188" rx="4" fill="#0e7490"/>
 <text x="950" y="459" class="project-name" textLength="157" lengthAdjust="spacingAndGlyphs">SSemaphore</text>
@@ -109,7 +109,7 @@
 <text x="1098" y="544" class="row-value" textLength="381" lengthAdjust="spacingAndGlyphs">Loopback and fixed-seed 28-job saturation evidence</text>
 <text x="950" y="572" class="row-label">BOUNDARY</text>
 <text x="1074" y="572" class="boundary" textLength="497" lengthAdjust="spacingAndGlyphs">One synthetic run; no throughput, latency, RSS, or fairness score</text>
-<text x="950" y="597" class="ref" textLength="129" lengthAdjust="spacingAndGlyphs">main · 6a4974d01bc5</text>
+<text x="950" y="597" class="ref" textLength="124" lengthAdjust="spacingAndGlyphs">main · f08757fc31d4</text>
 <rect x="1230" y="579" width="76" height="26" rx="13" fill="#cffafe"/>
 <circle cx="1243" cy="592" r="4" fill="#0e7490"/>
 <text x="1253" y="597" class="chip">bounded</text>
@@ -120,7 +120,7 @@
 <circle cx="1417" cy="592" r="4" fill="#b45309"/>
 <text x="1427" y="597" class="chip">bounded claim</text>
 </g>
-<g data-project-id="runnelmoe" data-repository="omar07ibrahim/runnelmoe" data-default-branch="main" data-commit-oid="efaf38f10c1625d745eeb354c15ebe9b9b77611f" data-theme-ids="bounded-inputs,deterministic-replay,independent-verification,claim-boundaries">
+<g data-project-id="runnelmoe" data-repository="omar07ibrahim/runnelmoe" data-default-branch="main" data-commit-oid="6406aa889e977ef13bc548c11a32955118c74c92" data-theme-ids="bounded-inputs,deterministic-replay,independent-verification,claim-boundaries">
 <rect x="40" y="625" width="840" height="188" rx="18" class="project-card"/>
 <rect x="40" y="625" width="8" height="188" rx="4" fill="#0e7490"/>
 <text x="70" y="664" class="project-name" textLength="145" lengthAdjust="spacingAndGlyphs">RunnelMoE</text>
@@ -131,7 +131,7 @@
 <text x="218" y="749" class="row-value" textLength="365" lengthAdjust="spacingAndGlyphs">Closed M1-M4 captures and raw M3-M4 evidence</text>
 <text x="70" y="777" class="row-label">BOUNDARY</text>
 <text x="194" y="777" class="boundary" textLength="514" lengthAdjust="spacingAndGlyphs">Synthetic slices; no end-to-end inference or serving speedup claim</text>
-<text x="70" y="802" class="ref" textLength="120" lengthAdjust="spacingAndGlyphs">main · efaf38f10c16</text>
+<text x="70" y="802" class="ref" textLength="130" lengthAdjust="spacingAndGlyphs">main · 6406aa889e97</text>
 <rect x="350" y="784" width="76" height="26" rx="13" fill="#cffafe"/>
 <circle cx="363" cy="797" r="4" fill="#0e7490"/>
 <text x="373" y="802" class="chip">bounded</text>
@@ -145,7 +145,7 @@
 <circle cx="617" cy="797" r="4" fill="#b45309"/>
 <text x="627" y="802" class="chip">bounded claim</text>
 </g>
-<g data-project-id="tensorkiln" data-repository="omar07ibrahim/tensorkiln" data-default-branch="main" data-commit-oid="4a87a4d75098112fca0bbd24e8c2778a109a80df" data-theme-ids="bounded-inputs,deterministic-replay,independent-verification,claim-boundaries">
+<g data-project-id="tensorkiln" data-repository="omar07ibrahim/tensorkiln" data-default-branch="main" data-commit-oid="09cc6e36745f8d01cecdf0bc3b1e1b9be00f7ac9" data-theme-ids="bounded-inputs,deterministic-replay,independent-verification,claim-boundaries">
 <rect x="920" y="625" width="840" height="188" rx="18" class="project-card"/>
 <rect x="920" y="625" width="8" height="188" rx="4" fill="#0e7490"/>
 <text x="950" y="664" class="project-name" textLength="139" lengthAdjust="spacingAndGlyphs">TensorKiln</text>
@@ -156,7 +156,7 @@
 <text x="1098" y="749" class="row-value" textLength="501" lengthAdjust="spacingAndGlyphs">Three workloads, real CLI/GIF captures, and source-bound manifests</text>
 <text x="950" y="777" class="row-label">BOUNDARY</text>
 <text x="1074" y="777" class="boundary" textLength="540" lengthAdjust="spacingAndGlyphs">Fixed f32 workloads; no benchmark, importer, or full-transformer claim</text>
-<text x="950" y="802" class="ref" textLength="130" lengthAdjust="spacingAndGlyphs">main · 4a87a4d75098</text>
+<text x="950" y="802" class="ref" textLength="126" lengthAdjust="spacingAndGlyphs">main · 09cc6e36745f</text>
 <rect x="1230" y="784" width="76" height="26" rx="13" fill="#cffafe"/>
 <circle cx="1243" cy="797" r="4" fill="#0e7490"/>
 <text x="1253" y="802" class="chip">bounded</text>
@@ -170,7 +170,7 @@
 <circle cx="1497" cy="797" r="4" fill="#b45309"/>
 <text x="1507" y="802" class="chip">bounded claim</text>
 </g>
-<g data-project-id="falsewake" data-repository="omar07ibrahim/falsewake" data-default-branch="main" data-commit-oid="84389cda0bd7b715e166273d52640d16d84f5c4c" data-theme-ids="bounded-inputs,deterministic-replay,independent-verification,claim-boundaries">
+<g data-project-id="falsewake" data-repository="omar07ibrahim/falsewake" data-default-branch="main" data-commit-oid="20771db3e10eca6045cd6f02dce69b9e0f7726f9" data-theme-ids="bounded-inputs,deterministic-replay,independent-verification,claim-boundaries">
 <rect x="40" y="830" width="840" height="188" rx="18" class="project-card"/>
 <rect x="40" y="830" width="8" height="188" rx="4" fill="#0e7490"/>
 <text x="70" y="869" class="project-name" textLength="141" lengthAdjust="spacingAndGlyphs">FalseWake</text>
@@ -181,7 +181,7 @@
 <text x="218" y="954" class="row-value" textLength="376" lengthAdjust="spacingAndGlyphs">Experiments 000-001 reports and failed-run lineage</text>
 <text x="70" y="982" class="row-label">BOUNDARY</text>
 <text x="194" y="982" class="boundary" textLength="576" lengthAdjust="spacingAndGlyphs">Neural experiments 002-006 yielded no valid metric or reusable checkpoint</text>
-<text x="70" y="1007" class="ref" textLength="128" lengthAdjust="spacingAndGlyphs">main · 84389cda0bd7</text>
+<text x="70" y="1007" class="ref" textLength="129" lengthAdjust="spacingAndGlyphs">main · 20771db3e10e</text>
 <rect x="350" y="989" width="76" height="26" rx="13" fill="#cffafe"/>
 <circle cx="363" cy="1002" r="4" fill="#0e7490"/>
 <text x="373" y="1007" class="chip">bounded</text>
@@ -195,7 +195,7 @@
 <circle cx="617" cy="1002" r="4" fill="#b45309"/>
 <text x="627" y="1007" class="chip">bounded claim</text>
 </g>
-<g data-project-id="roleproof" data-repository="omar07ibrahim/roleproof" data-default-branch="main" data-commit-oid="480ccc6efcf25b624b029706d7d6da372765b102" data-theme-ids="bounded-inputs,deterministic-replay,independent-verification,claim-boundaries">
+<g data-project-id="roleproof" data-repository="omar07ibrahim/roleproof" data-default-branch="main" data-commit-oid="7f632947bf7262a05d92c0a6154de398e68dc7a9" data-theme-ids="bounded-inputs,deterministic-replay,independent-verification,claim-boundaries">
 <rect x="920" y="830" width="840" height="188" rx="18" class="project-card"/>
 <rect x="920" y="830" width="8" height="188" rx="4" fill="#0e7490"/>
 <text x="950" y="869" class="project-name" textLength="124" lengthAdjust="spacingAndGlyphs">RoleProof</text>
@@ -206,7 +206,7 @@
 <text x="1098" y="954" class="row-value" textLength="462" lengthAdjust="spacingAndGlyphs">12 source-bound CLI, Chromium, GIF, SVG, and JSON artifacts</text>
 <text x="950" y="982" class="row-label">BOUNDARY</text>
 <text x="1074" y="982" class="boundary" textLength="613" lengthAdjust="spacingAndGlyphs">Synthetic graph only; no live IAM, enforcement, benchmark, or compliance claim</text>
-<text x="950" y="1007" class="ref" textLength="122" lengthAdjust="spacingAndGlyphs">main · 480ccc6efcf2</text>
+<text x="950" y="1007" class="ref" textLength="125" lengthAdjust="spacingAndGlyphs">main · 7f632947bf72</text>
 <rect x="1230" y="989" width="76" height="26" rx="13" fill="#cffafe"/>
 <circle cx="1243" cy="1002" r="4" fill="#0e7490"/>
 <text x="1253" y="1007" class="chip">bounded</text>
@@ -220,7 +220,7 @@
 <circle cx="1497" cy="1002" r="4" fill="#b45309"/>
 <text x="1507" y="1007" class="chip">bounded claim</text>
 </g>
-<g data-project-id="planforge" data-repository="omar07ibrahim/Todo" data-default-branch="main" data-commit-oid="423770379df67bb6862d180a6813f953ff30fbfb" data-theme-ids="bounded-inputs,deterministic-replay,independent-verification,claim-boundaries">
+<g data-project-id="planforge" data-repository="omar07ibrahim/Todo" data-default-branch="main" data-commit-oid="42c2a428e9bdc193db2d33fea8e43e3a49c75edb" data-theme-ids="bounded-inputs,deterministic-replay,independent-verification,claim-boundaries">
 <rect x="40" y="1035" width="840" height="188" rx="18" class="project-card"/>
 <rect x="40" y="1035" width="8" height="188" rx="4" fill="#0e7490"/>
 <text x="70" y="1074" class="project-name" textLength="130" lengthAdjust="spacingAndGlyphs">PlanForge</text>
@@ -231,7 +231,7 @@
 <text x="218" y="1159" class="row-value" textLength="452" lengthAdjust="spacingAndGlyphs">Plan receipts plus real CLI, Chromium, SVG, and GIF evidence</text>
 <text x="70" y="1187" class="row-label">BOUNDARY</text>
 <text x="194" y="1187" class="boundary" textLength="455" lengthAdjust="spacingAndGlyphs">Nine serial tasks max; caller estimates remain assumptions</text>
-<text x="70" y="1212" class="ref" textLength="128" lengthAdjust="spacingAndGlyphs">main · 423770379df6</text>
+<text x="70" y="1212" class="ref" textLength="128" lengthAdjust="spacingAndGlyphs">main · 42c2a428e9bd</text>
 <rect x="350" y="1194" width="76" height="26" rx="13" fill="#cffafe"/>
 <circle cx="363" cy="1207" r="4" fill="#0e7490"/>
 <text x="373" y="1212" class="chip">bounded</text>

@@ -11,7 +11,7 @@
     "projects": [
       {
         "claim_boundary": "Authoring evidence only; no dataset, model, benchmark, or accuracy claim",
-        "commit_oid": "4fb56ee34b74f994d7dc3714443dfc8b25e45936",
+        "commit_oid": "52bf343f34c52600e837c00d928a27e82bfe53c9",
         "default_branch": "main",
         "evidence_surface": "12 Chromium checkpoints and a bound evidence manifest",
         "id": "impactdiff",
@@ -24,7 +24,7 @@
       },
       {
         "claim_boundary": "One synthetic run; no throughput, latency, RSS, or fairness score",
-        "commit_oid": "6a4974d01bc5e74307fb4dee192b0b8a752e6274",
+        "commit_oid": "f08757fc31d419a52ad7c2ae178c63f4b9fa1307",
         "default_branch": "main",
         "evidence_surface": "Loopback and fixed-seed 28-job saturation evidence",
         "id": "ssemaphore",
@@ -37,7 +37,7 @@
       },
       {
         "claim_boundary": "Synthetic slices; no end-to-end inference or serving speedup claim",
-        "commit_oid": "efaf38f10c1625d745eeb354c15ebe9b9b77611f",
+        "commit_oid": "6406aa889e977ef13bc548c11a32955118c74c92",
         "default_branch": "main",
         "evidence_surface": "Closed M1-M4 captures and raw M3-M4 evidence",
         "id": "runnelmoe",
@@ -51,7 +51,7 @@
       },
       {
         "claim_boundary": "Fixed f32 workloads; no benchmark, importer, or full-transformer claim",
-        "commit_oid": "4a87a4d75098112fca0bbd24e8c2778a109a80df",
+        "commit_oid": "09cc6e36745f8d01cecdf0bc3b1e1b9be00f7ac9",
         "default_branch": "main",
         "evidence_surface": "Three workloads, real CLI/GIF captures, and source-bound manifests",
         "id": "tensorkiln",
@@ -65,7 +65,7 @@
       },
       {
         "claim_boundary": "Neural experiments 002-006 yielded no valid metric or reusable checkpoint",
-        "commit_oid": "84389cda0bd7b715e166273d52640d16d84f5c4c",
+        "commit_oid": "20771db3e10eca6045cd6f02dce69b9e0f7726f9",
         "default_branch": "main",
         "evidence_surface": "Experiments 000-001 reports and failed-run lineage",
         "id": "falsewake",
@@ -79,7 +79,7 @@
       },
       {
         "claim_boundary": "Synthetic graph only; no live IAM, enforcement, benchmark, or compliance claim",
-        "commit_oid": "480ccc6efcf25b624b029706d7d6da372765b102",
+        "commit_oid": "7f632947bf7262a05d92c0a6154de398e68dc7a9",
         "default_branch": "main",
         "evidence_surface": "12 source-bound CLI, Chromium, GIF, SVG, and JSON artifacts",
         "id": "roleproof",
@@ -93,7 +93,7 @@
       },
       {
         "claim_boundary": "Nine serial tasks max; caller estimates remain assumptions",
-        "commit_oid": "423770379df67bb6862d180a6813f953ff30fbfb",
+        "commit_oid": "42c2a428e9bdc193db2d33fea8e43e3a49c75edb",
         "default_branch": "main",
         "evidence_surface": "Plan receipts plus real CLI, Chromium, SVG, and GIF evidence",
         "id": "planforge",
@@ -106,7 +106,7 @@
         ]
       }
     ],
-    "semantic_sha256": "84b732e27f3f82ce0035a27b7393678235449eb57cbda42d603115b95c3f80eb",
+    "semantic_sha256": "a4189b0892dd0ddfae07506547b4cf4f933172fa4fb04f32024978732911dbf7",
     "theme_count": 4,
     "theme_ids": [
       "bounded-inputs",
@@ -120,7 +120,7 @@
       "bytes": 21866,
       "media_type": "image/svg+xml",
       "path": "assets/portfolio-systems-map.svg",
-      "sha256": "f0b2022d83a26a1e8b1b2981e64124a1d1c7ae530a65255ebd5af69698491fdc"
+      "sha256": "8e3d2657b382381fa6e41aee739d015cdcb0c0eb83fed62c85ed591506a4c039"
     }
   ],
   "schema_version": 1,
@@ -128,7 +128,7 @@
     {
       "bytes": 6052,
       "path": "portfolio/projects.v1.json",
-      "sha256": "1f9efc006432bd6eec3477b6fca972cce5b6a8096196b57e5b4fbd69d53ac836"
+      "sha256": "28f1607d0709cd8dd4539fcbfccf737193338fa9fd4828665f33caa72cdd63a3"
     },
     {
       "bytes": 12052,
