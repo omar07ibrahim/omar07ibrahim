@@ -79,14 +79,15 @@ false-event gates. Experiments 002-006 are retained engineering and incident
 evidence only: they produced no valid neural metric, reusable checkpoint, ONNX
 result, or continuous-replay score.
 
-### [StrataFold](https://github.com/omar07ibrahim/stratafold) · Python · MoE compression research
+### [RoleProof](https://github.com/omar07ibrahim/roleproof) · JavaScript / Python · Symbolic access-policy security
 
-A clean-room lab for structural expert compression without silently relabeling
-dtype changes as compression. Its current M1 result is a pinned, bounded
-official-metadata target genome with raw records, a deliberate rejection path,
-and an 11-file visual atlas. No full checkpoint was downloaded or run, so M1
-makes no compression-ratio, quality, throughput, active-compute, or
-state-of-the-art claim.
+A dependency-free analyzer for bounded RBAC graphs with deterministic shortest
+escalation witnesses, Tarjan cycle reporting, scoped witness cuts, and an
+independent Floyd–Warshall verifier that never imports the analyzer. Public
+evidence includes 25 tests across Node 22/24 plus real CLI, desktop, mobile,
+full-page, GIF, SVG, and JSON artifacts bound to pinned Chromium and source
+hashes. The Orion policy is synthetic; there is no live IAM, enforcement,
+benchmark, compliance, or globally sufficient remediation claim.
 
 ### [PlanForge](https://github.com/omar07ibrahim/Todo) · Python · Classical AI / operations research
 
@@ -99,6 +100,10 @@ multi-user calendars, and caller estimates remain assumptions.
 
 ## Additional maintained systems
 
+- [StrataFold](https://github.com/omar07ibrahim/stratafold) · Python ·
+  MoE compression research — a pinned official-metadata target genome, raw M1
+  records, a deliberate rejection path, and an 11-file visual atlas; no full
+  checkpoint, compression-ratio, quality, throughput, or speed claim.
 - [PEFTLint](https://github.com/omar07ibrahim/peftlint) · Python · Model artifact
   tooling — fail-closed LoRA checkpoint admission, eight real CLI cases, and an
   explicit UNKNOWN compatibility boundary.

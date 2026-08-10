@@ -95,23 +95,23 @@
       "url": "https://github.com/omar07ibrahim/falsewake"
     },
     {
-      "claim_boundary": "Metadata only; no checkpoint run, compression ratio, quality, or speed claim",
-      "commit_oid": "3086247ab991571d377fd9b2b0773cd40c6a2441",
+      "claim_boundary": "Synthetic graph only; no live IAM, enforcement, benchmark, or compliance claim",
+      "commit_oid": "480ccc6efcf25b624b029706d7d6da372765b102",
       "default_branch": "main",
-      "domain": "MoE compression research",
-      "evidence_surface": "M1 target-genome records and 11-file visual atlas",
-      "focus": "Pinned target metadata validation",
-      "id": "stratafold",
-      "language": "Python",
-      "name": "StrataFold",
-      "repository": "omar07ibrahim/stratafold",
+      "domain": "Symbolic access-policy security",
+      "evidence_surface": "12 source-bound CLI, Chromium, GIF, SVG, and JSON artifacts",
+      "focus": "Independently verified RBAC witnesses",
+      "id": "roleproof",
+      "language": "JavaScript / Python",
+      "name": "RoleProof",
+      "repository": "omar07ibrahim/roleproof",
       "themes": [
         "bounded-inputs",
         "deterministic-replay",
         "independent-verification",
         "claim-boundaries"
       ],
-      "url": "https://github.com/omar07ibrahim/stratafold"
+      "url": "https://github.com/omar07ibrahim/roleproof"
     },
     {
       "claim_boundary": "Nine serial tasks max; caller estimates remain assumptions",
