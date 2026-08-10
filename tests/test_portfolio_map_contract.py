@@ -17,7 +17,7 @@ from tools.portfolio_map_contract import (
 ROOT = Path(__file__).resolve().parents[1]
 MAP_PATH = ROOT / "portfolio" / "projects.v1.json"
 FROZEN_SEMANTIC_SHA256 = (
-    "60a8d25a43e7ba8be2f73d24a34a2b6b932b898a59b6f37d9ba07e9b85c3545c"
+    "84b732e27f3f82ce0035a27b7393678235449eb57cbda42d603115b95c3f80eb"
 )
 
 

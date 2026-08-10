@@ -78,12 +78,12 @@
         ]
       },
       {
-        "claim_boundary": "Metadata only; no checkpoint run, compression ratio, quality, or speed claim",
-        "commit_oid": "3086247ab991571d377fd9b2b0773cd40c6a2441",
+        "claim_boundary": "Synthetic graph only; no live IAM, enforcement, benchmark, or compliance claim",
+        "commit_oid": "480ccc6efcf25b624b029706d7d6da372765b102",
         "default_branch": "main",
-        "evidence_surface": "M1 target-genome records and 11-file visual atlas",
-        "id": "stratafold",
-        "repository": "omar07ibrahim/stratafold",
+        "evidence_surface": "12 source-bound CLI, Chromium, GIF, SVG, and JSON artifacts",
+        "id": "roleproof",
+        "repository": "omar07ibrahim/roleproof",
         "theme_ids": [
           "bounded-inputs",
           "deterministic-replay",
@@ -106,7 +106,7 @@
         ]
       }
     ],
-    "semantic_sha256": "60a8d25a43e7ba8be2f73d24a34a2b6b932b898a59b6f37d9ba07e9b85c3545c",
+    "semantic_sha256": "84b732e27f3f82ce0035a27b7393678235449eb57cbda42d603115b95c3f80eb",
     "theme_count": 4,
     "theme_ids": [
       "bounded-inputs",
@@ -117,18 +117,18 @@
   },
   "outputs": [
     {
-      "bytes": 21833,
+      "bytes": 21866,
       "media_type": "image/svg+xml",
       "path": "assets/portfolio-systems-map.svg",
-      "sha256": "0fb42ee20ae7b0dbb01ca16c632f1774a0432af75b6931a37647b0e9055b02b9"
+      "sha256": "f0b2022d83a26a1e8b1b2981e64124a1d1c7ae530a65255ebd5af69698491fdc"
     }
   ],
   "schema_version": 1,
   "sources": [
     {
-      "bytes": 6020,
+      "bytes": 6052,
       "path": "portfolio/projects.v1.json",
-      "sha256": "f3a571dc595e19802293070aef94d87fccd7b81ac26bc3702d80892ce492c4ac"
+      "sha256": "1f9efc006432bd6eec3477b6fca972cce5b6a8096196b57e5b4fbd69d53ac836"
     },
     {
       "bytes": 12052,
