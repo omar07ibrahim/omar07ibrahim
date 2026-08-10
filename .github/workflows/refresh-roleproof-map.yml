@@ -25,7 +25,7 @@ jobs:
     if: >-
       github.repository == 'omar07ibrahim/omar07ibrahim' &&
       github.actor == 'omar07ibrahim' &&
-      github.event.head_commit.message == 'Refresh RoleProof portfolio evidence'
+      github.event.head_commit.message == 'Repair RoleProof portfolio verifier'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
 
@@ -50,7 +50,7 @@ jobs:
           test "$GITHUB_REPOSITORY" = omar07ibrahim/omar07ibrahim
           test "$GITHUB_ACTOR" = omar07ibrahim
           test "$GITHUB_REF" = refs/heads/profile/showcase-roleproof
-          test "$(git log -1 --pretty=%s)" = "Refresh RoleProof portfolio evidence"
+          test "$(git log -1 --pretty=%s)" = "Repair RoleProof portfolio verifier"
           [[ "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]]
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
           test -z "$(git status --porcelain=v1 --untracked-files=all)"

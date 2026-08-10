@@ -64,9 +64,9 @@ EXPECTED_PROJECT_REFS: Final = (
         "84389cda0bd7b715e166273d52640d16d84f5c4c",
     ),
     (
-        "stratafold",
-        "omar07ibrahim/stratafold",
-        "3086247ab991571d377fd9b2b0773cd40c6a2441",
+        "roleproof",
+        "omar07ibrahim/roleproof",
+        "480ccc6efcf25b624b029706d7d6da372765b102",
     ),
     (
         "planforge",
