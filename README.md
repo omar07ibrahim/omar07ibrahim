@@ -104,6 +104,14 @@ multi-user calendars, and caller estimates remain assumptions.
   MoE compression research — a pinned official-metadata target genome, raw M1
   records, a deliberate rejection path, and an 11-file visual atlas; no full
   checkpoint, compression-ratio, quality, throughput, or speed claim.
+- [OrthoDrift](https://github.com/omar07ibrahim/orthodrift) · Python ·
+  Multilingual retrieval robustness — released
+  [v0.1.0](https://github.com/omar07ibrahim/orthodrift/releases/tag/v0.1.0)
+  with typed grapheme provenance, globally minimal supplied-edit proofs, exact
+  artifact replay, a verified offline report, and a
+  [13-file source-bound visual bundle](https://github.com/omar07ibrahim/orthodrift/tree/44e7fdc2e208db445569f31f2808e58340b9104b/docs/evidence);
+  the synthetic Şəki fixture is not a broad benchmark, dense-retrieval result,
+  or native-language review.
 - [PEFTLint](https://github.com/omar07ibrahim/peftlint) · Python · Model artifact
   tooling — fail-closed LoRA checkpoint admission, eight real CLI cases, and an
   explicit UNKNOWN compatibility boundary.
