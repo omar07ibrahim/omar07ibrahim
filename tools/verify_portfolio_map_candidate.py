@@ -41,37 +41,37 @@ EXPECTED_PROJECT_REFS: Final = (
     (
         "impactdiff",
         "omar07ibrahim/impactdiff",
-        "4fb56ee34b74f994d7dc3714443dfc8b25e45936",
+        "52bf343f34c52600e837c00d928a27e82bfe53c9",
     ),
     (
         "ssemaphore",
         "omar07ibrahim/ssemaphore",
-        "6a4974d01bc5e74307fb4dee192b0b8a752e6274",
+        "f08757fc31d419a52ad7c2ae178c63f4b9fa1307",
     ),
     (
         "runnelmoe",
         "omar07ibrahim/runnelmoe",
-        "efaf38f10c1625d745eeb354c15ebe9b9b77611f",
+        "6406aa889e977ef13bc548c11a32955118c74c92",
     ),
     (
         "tensorkiln",
         "omar07ibrahim/tensorkiln",
-        "4a87a4d75098112fca0bbd24e8c2778a109a80df",
+        "09cc6e36745f8d01cecdf0bc3b1e1b9be00f7ac9",
     ),
     (
         "falsewake",
         "omar07ibrahim/falsewake",
-        "84389cda0bd7b715e166273d52640d16d84f5c4c",
+        "20771db3e10eca6045cd6f02dce69b9e0f7726f9",
     ),
     (
         "roleproof",
         "omar07ibrahim/roleproof",
-        "480ccc6efcf25b624b029706d7d6da372765b102",
+        "7f632947bf7262a05d92c0a6154de398e68dc7a9",
     ),
     (
         "planforge",
         "omar07ibrahim/Todo",
-        "423770379df67bb6862d180a6813f953ff30fbfb",
+        "42c2a428e9bdc193db2d33fea8e43e3a49c75edb",
     ),
 )
 SECRET_PATTERNS: Final = (
