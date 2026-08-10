@@ -127,7 +127,7 @@ multi-user calendars, and caller estimates remain assumptions.
   the synthetic round does not identify attackers, guarantee convergence,
   preserve privacy, certify a federated-learning deployment, or establish
   universal poisoning resistance.
-- [IntentGate](https://github.com/omar07ibrahim/intentgate) · Python ·
+- [IntentGate](https://github.com/omar07ibrahim/intentgate) · JavaScript / Python ·
   Agentic AI safety — released
   [v0.1.0](https://github.com/omar07ibrahim/intentgate/releases/tag/v0.1.0)
   with deterministic proposal admission, human manager and privacy approvals,
