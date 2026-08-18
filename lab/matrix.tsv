@@ -1,0 +1,18 @@
+id	variable	baseline	candidate	status
+00	plain content	-	plain paragraphs	pending
+10	GFM table	00	3x3 table	pending
+20	details element	00	closed details	pending
+21	open attribute	20	open details	pending
+30	text direction	00	div dir=rtl	pending
+31	legacy dir element	00	dir/list	pending
+40	Markdown image	00	passive SVG via Markdown	pending
+41	HTML image	40	passive SVG via img	pending
+43	inline SVG	00	inline inert SVG	pending
+50	percentage width	41	img width=100%	pending
+51	large numeric width	41	img width=999999	pending
+52	large numeric height	41	img height=999999	pending
+60	alignment	41	centered HTML image	pending
+70	picture element	41	picture/source/img	pending
+80	table image composition	10	table containing large-width image	pending
+90	bounded composition	21	open details + table + RTL + image	pending
+

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 180" role="img" aria-labelledby="title desc">
+  <title id="title">Passive rendering fixture</title>
+  <desc id="desc">A static bounded SVG used only for layout measurements.</desc>
+  <rect width="1600" height="180" fill="#0d1117"/>
+  <rect x="8" y="8" width="1584" height="164" fill="none" stroke="#2f81f7" stroke-width="8"/>
+  <text x="800" y="104" text-anchor="middle" font-family="monospace" font-size="42" fill="#f0f6fc">PROFILE README RENDERING FIXTURE</text>
+</svg>
+
